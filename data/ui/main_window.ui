@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+    <object class="MainWindow" parent="HeApplicationWindow" id="main_window">
+        <child>
+            <object class="GtkBox" id="main_box">
+                <property name="orientation">vertical</property>
+                <child>
+                    <object class="HeAppBar" id="title">
+                        <property name="flat">false</property>
+                        <property name="show-buttons">true</property>
+                        <child>
+                            <object class="GtkMenuButton" id="menu_button">
+                                <property name="icon_name">open-menu-symbolic</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="HeViewMono" id="file_view">
+                        <child>
+                            <object class="GtkTextView" id="text_box" />
+                        </child>
+                    </object>
+                </child>
+                <child>
+                    <object class="HeBottomBar">
+                        <child type="left">
+                            <object class="HeIconicButton" id="new_button">
+                                <property name="icon">document-new-symbolic</property>
+                            </object>
+                        </child>
+                        <child type="left">
+                            <object class="HeIconicButton" id="open_button">
+                                <property name="icon">document-open-symbolic</property>
+                            </object>
+                        </child>
+                        <child type="left">
+                            <object class="HeIconicButton" id="save_as_button">
+                                <property name="icon">document-save-as-symbolic</property>
+                            </object>
+                        </child>
+                    </object>
+                </child>
+            </object>
+        </child>
+    </object>
+</interface>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+    <id>@app_id@</id>
+    <metadata_license>CC0-1.0</metadata_license>
+    <project_license>GPL-3.0+</project_license>
+    <name translatable="no">Enigma</name>
+    <summary>Simple text editor</summary>
+    <description>
+        <p>A simple text editor application.</p>
+    </description>
+    <provides>
+        <binary>co.tauos.Enigma</binary>
+    </provides>
+    <kudos>
+      <kudo>ModernToolkit</kudo>
+      <kudo>HiDpiIcon</kudo>
+    </kudos>
+    <developer_name translatable="no">Fyra Labs</developer_name>
+    <url type="homepage">https://github.com/tau-OS/enigma/</url>
+    <url type="bugtracker">https://github.com/tau-OS/enigma/issues</url>
+    <url type="translate">https://github.com/tau-OS/enigma/blob/main/po/README.md</url>
+    <launchable type="desktop-id">co.tauos.Enigma.desktop</launchable>
+    <screenshots>
+        <screenshot type="default">
+            <image>https://raw.githubusercontent.com/tau-OS/enigma/main/data/shot.png</image>
+        </screenshot>
+    </screenshots>
+    <content_rating type="oars-1.1" />
+    <translation type="gettext">@app_id@</translation>
+    <releases>
+        <release version="0.1.0" date="2022-08-01">
+            <description>
+                <p>First Release</p>
+            </description>
+        </release>
+    </releases>
+</component>

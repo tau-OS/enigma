@@ -1,0 +1,86 @@
+{
+    "app-id" : "co.tauos.Enigma.Devel",
+    "runtime" : "org.gnome.Platform",
+    "runtime-version" : "42",
+    "sdk" : "org.gnome.Sdk",
+    "command" : "co.tauos.Enigma",
+    "finish-args" : [
+        "--filesystem=xdg-run/gvfsd",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--share=ipc",
+        "--device=dri"
+    ],
+    "desktop-file-name-suffix" : " (Development)",
+    "cleanup" : [
+        "/cache",
+        "/man",
+        "/share/aclocal",
+        "/share/devhelp",
+        "/lib/systemd",
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/libvala*",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/vala",
+        "*.a",
+        "*.la"
+    ],
+    "modules" : [
+        {
+            "name": "tau-hydrogen",
+            "buildsystem": "meson",
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/tau-OS/tau-hydrogen.git",
+                    "branch": "main"
+                }
+            ],
+            "modules": [
+                {
+                    "name": "xcursorgen",
+                    "cleanup": [ "*" ],
+                    "sources": [
+                        {
+                            "type": "archive",
+                            "url": "https://xorg.freedesktop.org/archive/individual/app/xcursorgen-1.0.7.tar.gz",
+                            "sha256": "6bc32d4977ffd60c00583bfd217f1d1245ca54dafbfbbcdbf14f696f9487b83e"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "libhelium",
+            "buildsystem": "meson",
+            "config-opts" : [
+                "-Ddemo=false",
+                "-Dstylesheet=false",
+                "-Dintrospection=true"
+            ],
+            "sources": [
+                {
+                    "type": "git",
+                    "url": "https://github.com/tau-OS/libhelium.git",
+                    "branch": "main"
+                }
+            ]
+        },
+        {
+            "name" : "enigma",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Ddevelopment=true"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Name=Enigma
+Comment=Simple text editor
+Exec=@app_id@
+Icon=@app_id@
+Keywords=text;plain;plaintext;
+Terminal=false
+Type=Application
+StartupNotify=true
+Categories=GTK;Utility;

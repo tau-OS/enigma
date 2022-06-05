@@ -1,0 +1,13 @@
+_build/
+build/
+~*
+*~
+.flatpak-builder/
+.flatpak/flatpak-builder/*
+.flatpak/
+.flatpak/*
+.vscode/
+.vscode/*
+app-dir/
+obj-x86_64-linux-gnu/
+builddir/

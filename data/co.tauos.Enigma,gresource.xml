@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+    <gresource prefix="/co/tauos/Enigma">
+        <file alias="main_window.ui">data/main_window.ui</file>
+        <file alias="menu.ui">data/menu.ui</file>
+    </gresource>
+    <gresource prefix="/co/tauos/Enigma/icons">
+
+    </gresource>
+</gresources>
