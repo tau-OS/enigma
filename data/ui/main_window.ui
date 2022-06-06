@@ -28,10 +28,10 @@
                             <object class="GtkTextView" id="text_box">
                                 <property name="vexpand">1</property>
                                 <property name="wrap-mode">word</property>
-                                <property name="left-margin">6</property>
-                                <property name="right-margin">6</property>
-                                <property name="top-margin">6</property>
-                                <property name="bottom-margin">6</property>
+                                <property name="left-margin">18</property>
+                                <property name="right-margin">18</property>
+                                <property name="top-margin">18</property>
+                                <property name="bottom-margin">18</property>
                                 <property name="pixels-above-lines">3</property>
                                 <property name="pixels-inside-wrap">3</property>
                                 <style>

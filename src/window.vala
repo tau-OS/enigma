@@ -103,6 +103,11 @@ namespace Enigma {
             var builder = new Gtk.Builder.from_resource ("/co/tauos/Enigma/menu.ui");
             menu_button.menu_model = (MenuModel)builder.get_object ("menu");
 
+            var provider = new Gtk.CssProvider ();
+            provider.load_from_resource ("/co/tauos/Enigma/style.css");
+            Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
+                                                      provider,
+                                                      Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             var theme = Gtk.IconTheme.get_for_display (Gdk.Display.get_default ());
             theme.add_resource_path ("/co/tauos/Enigma/");
 
@@ -112,6 +117,15 @@ namespace Enigma {
             save_as_button.clicked.connect (() => { save.begin (); });
             text_box.get_buffer ().changed.connect (() => on_text_box_changed);
 
+            file_name = "New File";
+            file_name_ext = "new_file.txt";
+            file_line_count = "%d lines".printf(text_box.get_buffer ().get_line_count ());
+
+            Timeout.add_seconds (1, () => {
+                file_line_count = "%d lines".printf(text_box.get_buffer ().get_line_count ());
+            });
+
+            // Window
             this.set_size_request (360, 360);
             this.show ();
         }
@@ -130,6 +144,9 @@ namespace Enigma {
             try {
                 GLib.FileUtils.get_contents (file_path, out text);
                 text_box.get_buffer ().set_text (text);
+                file_name = file.get_basename ();
+                file_name_ext = file.get_basename ();
+                file_line_count = "%d lines".printf(text_box.get_buffer ().get_line_count ());
             } catch (Error err) {
                 print (err.message);
             }
@@ -148,6 +165,7 @@ namespace Enigma {
 
         public void on_text_box_changed () {
             modified = true;
+            file_line_count = "%d lines".printf(text_box.get_buffer ().get_line_count ());
         }
 
         public void action_about () {
