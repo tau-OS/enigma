@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
-    <object class="MainWindow" parent="HeApplicationWindow" id="main_window">
+    <requires lib="gtk" version="4.0" />
+    <template class="EnigmaMainWindow" parent="HeApplicationWindow">
         <child>
             <object class="GtkBox" id="main_box">
                 <property name="orientation">vertical</property>
@@ -43,5 +44,5 @@
                 </child>
             </object>
         </child>
-    </object>
+    </template>
 </interface>

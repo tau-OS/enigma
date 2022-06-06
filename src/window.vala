@@ -23,7 +23,7 @@ namespace Enigma {
         delegate void HookFunc ();
         public signal void clicked ();
 
-        [Gtk.Child]
+        [GtkChild]
         unowned Gtk.MenuButton menu_button;
 
         // Etc
@@ -72,13 +72,11 @@ namespace Enigma {
         }
 
         public void action_about () {
-            const string COPYRIGHT = "Copyright \xc2\xa9 2022 Fyra Labs\n";
+            string COPYRIGHT = "Copyright \xc2\xa9 2022 Fyra Labs\n";
 
-            const string? AUTHORS[] = {
+            string[] AUTHORS = {
                 "Lains",
-                null
             };
-
             Gtk.show_about_dialog (this,
                                    "program-name", "Enigma" + Config.NAME_SUFFIX,
                                    "logo-icon-name", Config.APP_ID,
@@ -90,8 +88,7 @@ namespace Enigma {
                                    "license-type", Gtk.License.GPL_3_0,
                                    "wrap-license", false,
                                    // TRANSLATORS: 'Name <email@domain.com>' or 'Name https://website.example'
-                                   "translator-credits", _("translator-credits"),
-                                   null);
+                                   "translator-credits", _("translator-credits"));
         }
     }
 }

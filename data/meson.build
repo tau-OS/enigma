@@ -51,10 +51,3 @@ install_data(
   meson.project_name() + '.gschema.xml',
   install_dir: join_paths(get_option('datadir'), 'glib-2.0/schemas')
 )
-
-asresources = gnome.compile_resources(
-  'as-resources',
-  meson.project_name() + '.gresources.xml',
-  source_dir: '.',
-  c_name: 'as',
-)
