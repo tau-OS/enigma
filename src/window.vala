@@ -144,7 +144,7 @@ namespace Enigma {
             try {
                 GLib.FileUtils.get_contents (file_path, out text);
                 text_box.get_buffer ().set_text (text);
-                file_name = file.get_basename ();
+                file_name = file.get_basename ().replace (".txt", "");
                 file_name_ext = file.get_basename ();
                 file_line_count = "%d lines".printf(text_box.get_buffer ().get_line_count ());
             } catch (Error err) {
