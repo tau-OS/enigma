@@ -13,10 +13,10 @@ add_project_arguments([
 )
 
 if get_option('development')
-  app_id = 'co.tauos.Enigma.Devel'
+  app_id = meson.project_name() + '.Devel'
   name_suffix = ' (Development)'
 else
-  app_id = 'co.tauos.Enigma'
+  app_id = meson.project_name()
   name_suffix = ''
 endif
 
@@ -37,9 +37,10 @@ add_project_arguments(
 )
 
 asresources = gnome.compile_resources(
-  'as-resources', 'data/co.tauos.Enigma.gresource.xml',
+  'as-resources',
+  'data/' + meson.project_name() + '.gresources.xml',
   source_dir: 'data',
-  c_name: 'as'
+  c_name: 'as',
 )
 
 sources = [
@@ -53,7 +54,7 @@ dependencies = [
   dependency('glib-2.0'),
   dependency('gobject-2.0'),
   dependency('gee-0.8'),
-  dependency('libhelium-1.0'),
+  dependency('He'),
   dependency('gmodule-2.0'),
 ]
 
