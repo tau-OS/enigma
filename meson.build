@@ -36,13 +36,6 @@ add_project_arguments(
   language: 'c'
 )
 
-asresources = gnome.compile_resources(
-  'as-resources',
-  'data/' + meson.project_name() + '.gresources.xml',
-  source_dir: 'data',
-  c_name: 'as',
-)
-
 sources = [
   'src/app.vala',
   'src/window.vala',
@@ -58,6 +51,9 @@ dependencies = [
   dependency('gmodule-2.0'),
 ]
 
+subdir('data')
+subdir('po')
+
 executable(
   meson.project_name(),
   sources,
@@ -66,9 +62,6 @@ executable(
   vala_args: [meson.project_source_root() + '/src/config.vapi'],
   install : true
 )
-
-subdir('data')
-subdir('po')
 
 gnome.post_install(
   glib_compile_schemas: true,
