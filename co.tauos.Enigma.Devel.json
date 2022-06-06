@@ -81,8 +81,9 @@
             "name": "manrope-fonts",
             "buildsystem": "simple",
             "build-commands" : [
-                "install -d ${FLATPAK_DEST}/fonts/OTF",
-                "install -D -m755 otf/*.otf ${FLATPAK_DEST}/fonts/OTF/"
+                "install -d ${FLATPAK_DEST}/share/fonts/manrope",
+                "install -D -m755 otf/*.otf ${FLATPAK_DEST}/share/fonts/manrope/",
+                "fc-cache -f -v"
             ],
             "sources": [
                 {
@@ -90,6 +91,20 @@
                     "url" : "https://manropefont.com/manrope.zip",
                     "sha256": "55df46e6c66a7dce193f234001327d94f4bc9e972b8499d11ba9c2eefcc9f4d9"
                 }
+            ]
+        },
+        {
+            "name" : "default-gtk-settings",
+            "buildsystem" : "simple",
+            "sources" : [
+                {
+                    "type": "git",
+                    "url": "https://github.com/tau-OS/tau-release.git",
+                    "branch": "main"
+                }
+            ],
+            "build-commands": [
+                "install -Dm644 org.gnome.desktop.gschema.override ${FLATPAK_DEST}/etc/gtk-4.0/settings.ini"
             ]
         },
         {
