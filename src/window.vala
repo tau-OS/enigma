@@ -33,6 +33,8 @@ namespace Enigma {
         unowned Gtk.Button save_as_button;
         [GtkChild]
         unowned Gtk.TextView text_box;
+        [GtkChild]
+        unowned Gtk.SearchEntry search_entry;
 
         private string _file_name = null;
         public string file_name {
@@ -129,6 +131,17 @@ namespace Enigma {
             // Window
             this.set_size_request (360, 360);
             this.show ();
+        }
+
+        [GtkCallback]
+        public void on_search_activate () {
+            var search_str = search_entry.get_text();
+            Gtk.TextIter start_iter, end_iter, match_start, match_end;
+            text_box.get_buffer ().get_bounds (out start_iter, out end_iter);
+            bool found = start_iter.forward_search (search_str, 0, out match_start, out match_end, end_iter);
+            if (found) {
+                text_box.get_buffer ().select_range (match_start, match_end);
+            }
         }
 
         public void on_new_button_clicked () {

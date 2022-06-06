@@ -4,3 +4,7 @@
 .view.textview {
     border-radius: 12px;
 }
+
+.search {
+    border-radius: 99px;
+}
