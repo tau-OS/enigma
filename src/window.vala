@@ -158,6 +158,7 @@ namespace Enigma {
             text_box.get_buffer ().get_bounds (out start, out end);
             try {
                 GLib.FileUtils.set_contents (file.get_path (), text_box.get_buffer ().get_text (start, end, false));
+                modified = false;
             } catch (Error err) {
                 print (err.message);
             }
