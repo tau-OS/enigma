@@ -8,6 +8,8 @@ i18n = import('i18n')
 
 add_project_arguments([
 		'--target-glib=2.68',
+    '--gresourcesdir',
+    meson.current_build_dir() / 'data',
 	],
 	language: 'vala',
 )
@@ -36,10 +38,20 @@ add_project_arguments(
   language: 'c'
 )
 
+blueprints = custom_target('blueprints',
+  input: files(
+    'data/ui/main_window.blp',
+    'data/ui/menu.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
 asresources = gnome.compile_resources(
 	'as-resources', join_paths(meson.project_source_root(), 'data', meson.project_name() + '.gresources.xml'),
-	source_dir: join_paths(meson.project_source_root(), 'data'),
-	c_name: 'as'
+	source_dir: [join_paths(meson.project_source_root(), 'data'), join_paths(meson.project_build_root(), 'data')],
+	c_name: 'as',
+  dependencies: blueprints,
 )
 
 sources = [

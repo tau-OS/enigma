@@ -1,0 +1,77 @@
+using Gtk 4.0;
+
+template EnigmaMainWindow : .HeApplicationWindow {
+  default-width: "800";
+  default-height: "600";
+
+  Box main_box {
+    orientation: vertical;
+
+    .HeAppBar title {
+      flat: "1";
+      show-buttons: "1";
+
+      MenuButton menu_button {
+        icon-name: "open-menu-symbolic";
+      }
+
+      ToggleButton search_button {
+        icon-name: "system-search-symbolic";
+      }
+    }
+
+    .HeViewMono file_view {
+      vexpand: "1";
+      title: bind EnigmaMainWindow.file_name;
+
+      Revealer search_revealer {
+        reveal-child: bind search_button.active;
+
+        SearchEntry search_entry {
+          placeholder-text: "Search text…";
+          halign: start;
+          search-changed => on_search_activate();
+
+          styles [
+            "search",
+          ]
+        }
+      }
+
+      TextView text_box {
+        vexpand: true;
+        wrap-mode: word;
+        left-margin: 18;
+        right-margin: 18;
+        top-margin: 18;
+        bottom-margin: 18;
+        pixels-above-lines: 3;
+        pixels-inside-wrap: 3;
+
+        styles [
+          "textview",
+        ]
+      }
+    }
+
+    .HeBottomBar {
+      title: bind EnigmaMainWindow.file_name_ext;
+      description: bind EnigmaMainWindow.file_line_count;
+      
+      [left]
+      .HeIconicButton new_button {
+        icon: "document-new-symbolic";
+      }
+
+      [left]
+      .HeIconicButton open_button {
+        icon: "document-open-symbolic";
+      }
+
+      [left]
+      .HeIconicButton save_as_button {
+        icon: "document-save-as-symbolic";
+      }
+    }
+  }
+}
