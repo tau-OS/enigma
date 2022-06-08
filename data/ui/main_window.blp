@@ -25,6 +25,10 @@ template EnigmaMainWindow : libhelium.ApplicationWindow {
       vexpand: true;
       title: bind EnigmaMainWindow.file_name;
 
+      styles [
+        "eni-view"
+      ]
+
       Revealer search_revealer {
         reveal-child: bind search_button.active;
 
@@ -32,10 +36,6 @@ template EnigmaMainWindow : libhelium.ApplicationWindow {
           placeholder-text: "Search text…";
           halign: start;
           search-changed => on_search_activate();
-
-          styles [
-            "eni-search",
-          ]
         }
       }
 
@@ -48,10 +48,6 @@ template EnigmaMainWindow : libhelium.ApplicationWindow {
         bottom-margin: 18;
         pixels-above-lines: 3;
         pixels-inside-wrap: 3;
-
-        styles [
-          "eni-textview",
-        ]
       }
     }
 

@@ -1,10 +1,10 @@
 @define-color accent_bg_color #268EF9;
 @define-color accent_color #268EF9;
 
-.view.eni-textview {
-    border-radius: 12px;
+.eni-view .search {
+    border-radius: 99px;
 }
 
-.search.eni-search {
-    border-radius: 99px;
+.eni-view .view {
+    border-radius: 12px;
 }
