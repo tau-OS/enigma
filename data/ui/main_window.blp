@@ -1,15 +1,16 @@
 using Gtk 4.0;
+using libhelium 1;
 
-template EnigmaMainWindow : .HeApplicationWindow {
+template EnigmaMainWindow : libhelium.ApplicationWindow {
   default-width: "800";
   default-height: "600";
 
   Box main_box {
     orientation: vertical;
 
-    .HeAppBar title {
-      flat: "1";
-      show-buttons: "1";
+    libhelium.AppBar title {
+      flat: true;
+      show-buttons: true;
 
       MenuButton menu_button {
         icon-name: "open-menu-symbolic";
@@ -20,8 +21,8 @@ template EnigmaMainWindow : .HeApplicationWindow {
       }
     }
 
-    .HeViewMono file_view {
-      vexpand: "1";
+    libhelium.ViewMono file_view {
+      vexpand: true;
       title: bind EnigmaMainWindow.file_name;
 
       Revealer search_revealer {
@@ -33,7 +34,7 @@ template EnigmaMainWindow : .HeApplicationWindow {
           search-changed => on_search_activate();
 
           styles [
-            "search",
+            "eni-search",
           ]
         }
       }
@@ -49,27 +50,27 @@ template EnigmaMainWindow : .HeApplicationWindow {
         pixels-inside-wrap: 3;
 
         styles [
-          "textview",
+          "eni-textview",
         ]
       }
     }
 
-    .HeBottomBar {
+    libhelium.BottomBar {
       title: bind EnigmaMainWindow.file_name_ext;
       description: bind EnigmaMainWindow.file_line_count;
       
       [left]
-      .HeIconicButton new_button {
+      libhelium.IconicButton new_button {
         icon: "document-new-symbolic";
       }
 
       [left]
-      .HeIconicButton open_button {
+      libhelium.IconicButton open_button {
         icon: "document-open-symbolic";
       }
 
       [left]
-      .HeIconicButton save_as_button {
+      libhelium.IconicButton save_as_button {
         icon: "document-save-as-symbolic";
       }
     }

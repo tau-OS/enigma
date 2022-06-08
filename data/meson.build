@@ -53,3 +53,21 @@ install_data(
 )
 
 subdir('icons')
+
+blueprints = custom_target('blueprints',
+  input: files(
+    'ui/main_window.blp',
+    'ui/menu.blp',
+  ),
+  output: '.',
+  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
+)
+
+asresources = gnome.compile_resources(
+	'asresources',
+  'co.tauos.Enigma.gresources.xml',
+  source_dir: meson.current_build_dir(),
+  c_name: 'as',
+  dependencies: blueprints,
+  install_dir: get_option('datadir') / meson.project_name(),
+)

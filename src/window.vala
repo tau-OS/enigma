@@ -105,11 +105,6 @@ namespace Enigma {
             var builder = new Gtk.Builder.from_resource ("/co/tauos/Enigma/menu.ui");
             menu_button.menu_model = (MenuModel)builder.get_object ("menu");
 
-            var provider = new Gtk.CssProvider ();
-            provider.load_from_resource ("/co/tauos/Enigma/style.css");
-            Gtk.StyleContext.add_provider_for_display (Gdk.Display.get_default (),
-                                                      provider,
-                                                      Gtk.STYLE_PROVIDER_PRIORITY_APPLICATION);
             var theme = Gtk.IconTheme.get_for_display (Gdk.Display.get_default ());
             theme.add_resource_path ("/co/tauos/Enigma/");
 

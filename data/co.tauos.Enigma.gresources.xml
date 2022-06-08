@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <gresources>
   <gresource prefix="/co/tauos/Enigma">
-    <file>style.css</file>
+    <file alias="style.css">style.css</file>
 
     <file alias="main_window.ui">ui/main_window.ui</file>
     <file alias="menu.ui">ui/menu.ui</file>
