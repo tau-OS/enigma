@@ -116,10 +116,10 @@ namespace Enigma {
 
             file_name = "New File";
             file_name_ext = "new_file.txt";
-            file_line_count = "%d".printf(get_lines ()) + (_(" lines."));
+            file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
 
             Timeout.add_seconds (1, () => {
-                file_line_count = "%d".printf(get_lines ()) + (_(" lines."));
+                file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
                 return true;
             });
 
@@ -155,7 +155,7 @@ namespace Enigma {
                 text_box.get_buffer ().set_text (text);
                 file_name = file.get_basename ().replace (".txt", "");
                 file_name_ext = file.get_basename ();
-                file_line_count = "%d".printf(get_lines ()) + (_(" lines."));
+                file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
             } catch (Error err) {
                 print (err.message);
             }
@@ -175,7 +175,7 @@ namespace Enigma {
 
         public void on_text_box_changed () {
             modified = true;
-            file_line_count = "%d".printf(get_lines ()) + (_(" lines."));
+            file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
         }
 
         public int get_lines () {
