@@ -1,15 +1,14 @@
 {
     "app-id" : "co.tauos.Enigma.Devel",
-    "runtime" : "org.gnome.Platform",
-    "runtime-version" : "42",
-    "sdk" : "org.gnome.Sdk",
+    "runtime" : "co.tauos.Platform",
+    "runtime-version" : "daily",
+    "sdk" : "co.tauos.Sdk",
     "command" : "co.tauos.Enigma",
     "finish-args" : [
         "--filesystem=xdg-run/gvfsd",
         "--socket=wayland",
         "--socket=fallback-x11",
-        "--share=ipc",
-        "--device=dri"
+        "--share=ipc"
     ],
     "desktop-file-name-suffix" : " (Development)",
     "cleanup" : [
@@ -28,105 +27,6 @@
         "*.la"
     ],
     "modules" : [
-        {
-            "name": "tau-hydrogen",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/tau-OS/tau-hydrogen.git",
-                    "branch": "main"
-                }
-            ],
-            "modules": [
-                {
-                    "name": "xcursorgen",
-                    "cleanup": [ "*" ],
-                    "sources": [
-                        {
-                            "type": "archive",
-                            "url": "https://xorg.freedesktop.org/archive/individual/app/xcursorgen-1.0.7.tar.gz",
-                            "sha256": "6bc32d4977ffd60c00583bfd217f1d1245ca54dafbfbbcdbf14f696f9487b83e"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            "name": "stylesheet",
-            "buildsystem": "meson",
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/tau-OS/tau-helium.git",
-                    "branch": "main"
-                }
-            ],
-            "modules": [
-                {
-                  "name" : "sass",
-                  "buildsystem" : "simple",
-                  "build-commands" : [ "install -D -m755 sass ${FLATPAK_DEST}/bin/sass" ],
-                  "sources" : [
-                    {
-                      "type" : "archive",
-                      "url" : "https://github.com/sass/dart-sass/releases/download/1.52.1/dart-sass-1.52.1-linux-x64.tar.gz",
-                      "sha256" : "6e893c09e863e74a28b77b809cf63a99b2d14724611858d8f3e54910e1a069d8"
-                    }
-                  ]
-                }
-            ]
-        },
-        {
-            "name": "manrope-fonts",
-            "buildsystem": "simple",
-            "build-commands" : [
-                "install -d ${FLATPAK_DEST}/share/fonts/manrope",
-                "install -D -m755 otf/*.otf ${FLATPAK_DEST}/share/fonts/manrope/",
-                "fc-cache -f -v"
-            ],
-            "sources": [
-                {
-                    "type" : "archive",
-                    "url" : "https://manropefont.com/manrope.zip",
-                    "sha256": "55df46e6c66a7dce193f234001327d94f4bc9e972b8499d11ba9c2eefcc9f4d9"
-                }
-            ]
-        },
-        {
-            "name" : "default-gtk-settings",
-            "buildsystem" : "simple",
-            "sources" : [
-                {
-                    "type": "git",
-                    "url": "https://github.com/tau-OS/tau-release.git",
-                    "branch": "main"
-                }
-            ],
-            "build-commands": [
-                "install -Dm644 org.gnome.desktop.gschema.override ${FLATPAK_DEST}/etc/gtk-4.0/settings.ini"
-            ]
-        },
-        {
-            "name": "libhelium",
-            "buildsystem": "meson",
-            "config-opts" : [
-                "-Ddemo=false",
-                "-Ddocumentation=false",
-                "-Dvapi=true",
-                "-Dintrospection=true"
-            ],
-            "build-options": {
-                "build-args": [ "--share=network" ]
-            },
-            "sources": [
-                {
-                    "type": "git",
-                    "url": "https://github.com/tau-OS/libhelium.git",
-                    "branch": "main"
-                }
-            ]
-        },
         {
             "name" : "enigma",
             "builddir" : true,
