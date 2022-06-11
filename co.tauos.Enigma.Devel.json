@@ -15,7 +15,6 @@
         "/cache",
         "/man",
         "/share/aclocal",
-        "/share/devhelp",
         "/lib/systemd",
         "/include",
         "/lib/pkgconfig",

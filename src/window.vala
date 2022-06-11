@@ -201,25 +201,22 @@ namespace Enigma {
         }
 
         public void action_about () {
-            string COPYRIGHT = "Copyright \xc2\xa9 2022 Fyra Labs\n";
-
-            string[] AUTHORS = {
-                "Lains",
-            };
-            Gtk.show_about_dialog (
-                                   this,
-                                   "program-name", "Enigma" + Config.NAME_SUFFIX,
-                                   "logo-icon-name", Config.APP_ID,
-                                   "version", Config.VERSION,
-                                   "comments", _("A simple text editor."),
-                                   "copyright", COPYRIGHT,
-                                   "authors", AUTHORS,
-                                   "artists", null,
-                                   "license-type", Gtk.License.GPL_3_0,
-                                   "wrap-license", false,
-                                   // TRANSLATORS: 'Name <email@domain.com>' or 'Name https://website.example'
-                                   "translator-credits", _("translator-credits")
-                                  );
+            var about = new He.AboutWindow (
+                this,
+                "Enigma" + Config.NAME_SUFFIX,
+                Config.APP_ID,
+                Config.VERSION,
+                Config.APP_ID,
+                "https://github.com/tau-OS/enigma/tree/main/po",
+                "https://github.com/tau-OS/enigma/issues",
+                "catalogue://co.tauos.Enigma",
+                {"Lains", "Lea"},
+                {"Lains", "Lea"},
+                2022,
+                He.AboutWindow.Licenses.GPLv3,
+                He.Colors.BLUE
+            );
+            about.present ();
         }
     }
 }
