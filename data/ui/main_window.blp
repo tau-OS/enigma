@@ -1,14 +1,14 @@
 using Gtk 4.0;
-using He 1;
+using libhelium 1;
 
-template EnigmaMainWindow : He.ApplicationWindow {
+template EnigmaMainWindow : libhelium.ApplicationWindow {
   default-width: "800";
-  default-height: "600";
+  default-libheliumight: "600";
 
   Box main_box {
     orientation: vertical;
 
-    He.AppBar title {
+    libhelium.AppBar title {
       flat: true;
       show-buttons: true;
 
@@ -21,7 +21,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
       }
     }
 
-    He.ViewMono file_view {
+    libhelium.ViewMono file_view {
       vexpand: true;
       title: bind EnigmaMainWindow.file_name;
 
@@ -32,7 +32,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
       Revealer search_revealer {
         reveal-child: bind search_button.active;
 
-        SearchEntry search_entry {
+        Searclibheliumntry search_entry {
           placeholder-text: "Search text…";
           halign: start;
           search-changed => on_search_activate();
@@ -51,22 +51,22 @@ template EnigmaMainWindow : He.ApplicationWindow {
       }
     }
 
-    He.BottomBar {
+    libhelium.BottomBar {
       title: bind EnigmaMainWindow.file_name_ext;
       description: bind EnigmaMainWindow.file_line_count;
       
       [left]
-      He.IconicButton new_button {
+      libhelium.IconicButton new_button {
         icon: "document-new-symbolic";
       }
 
       [left]
-      He.IconicButton open_button {
+      libhelium.IconicButton open_button {
         icon: "document-open-symbolic";
       }
 
       [left]
-      He.IconicButton save_as_button {
+      libhelium.IconicButton save_as_button {
         icon: "document-save-as-symbolic";
       }
     }
