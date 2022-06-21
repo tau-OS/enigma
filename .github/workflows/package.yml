@@ -27,4 +27,6 @@ jobs:
       name: "enigma"
       tauOSVersion: "1.1"
     secrets:
-      teleportIdentity: ${{ secrets.TELEPORT_IDENTITY }}
+      repoIP: ${{ secrets.REPO_IP }}
+      repoKnownHosts: ${{ secrets.REPO_KNOWN_HOSTS }}
+      repoPrivateKey: ${{ secrets.REPO_PRIVATE_KEY }}
