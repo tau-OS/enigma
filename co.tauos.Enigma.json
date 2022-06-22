@@ -1,0 +1,44 @@
+{
+    "rename-icon" : "co.tauos.Enigma",
+    "app-id" : "co.tauos.Enigma",
+    "runtime" : "co.tauos.Platform",
+    "runtime-version" : "1.1",
+    "sdk" : "co.tauos.Sdk",
+    "command" : "co.tauos.Enigma",
+    "finish-args" : [
+        "--filesystem=xdg-run/gvfsd",
+        "--socket=wayland",
+        "--socket=fallback-x11",
+        "--share=ipc"
+    ],
+    "cleanup" : [
+        "/cache",
+        "/man",
+        "/share/aclocal",
+        "/lib/systemd",
+        "/include",
+        "/lib/pkgconfig",
+        "/lib/libvala*",
+        "/share/gtk-doc",
+        "/share/man",
+        "/share/vala",
+        "*.a",
+        "*.la"
+    ],
+    "modules" : [
+        {
+            "name" : "enigma",
+            "builddir" : true,
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Ddevelopment=true"
+            ],
+            "sources" : [
+                {
+                    "type" : "dir",
+                    "path" : "."
+                }
+            ]
+        }
+    ]
+}
