@@ -30,9 +30,6 @@
             "name" : "enigma",
             "builddir" : true,
             "buildsystem" : "meson",
-            "config-opts" : [
-                "-Ddevelopment=true"
-            ],
             "sources" : [
                 {
                     "type" : "dir",
