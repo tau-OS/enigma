@@ -64,7 +64,7 @@ blueprints = custom_target('blueprints',
 )
 
 asresources = gnome.compile_resources(
-	'asresources',
+  'asresources',
   'co.tauos.Enigma.gresources.xml',
   source_dir: meson.current_build_dir(),
   c_name: 'as',
