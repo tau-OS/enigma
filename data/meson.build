@@ -58,6 +58,7 @@ blueprints = custom_target('blueprints',
   input: files(
     'ui/main_window.blp',
     'ui/menu.blp',
+    'ui/prefs.blp',
   ),
   output: '.',
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],

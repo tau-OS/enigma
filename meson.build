@@ -42,6 +42,7 @@ subdir('data')
 
 sources = [
   'src/app.vala',
+  'src/prefs.vala',
   'src/utils.vala',
   'src/window.vala',
 ]

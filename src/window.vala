@@ -71,10 +71,12 @@ namespace Enigma {
         public SimpleActionGroup actions { get; construct; }
         public const string ACTION_PREFIX = "win.";
         public const string ACTION_ABOUT = "action_about";
+        public const string ACTION_PREFS = "action_prefs";
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const GLib.ActionEntry[] ACTION_ENTRIES = {
               { ACTION_ABOUT, action_about },
+              { ACTION_PREFS, action_prefs },
         };
 
         public He.Application app { get; construct; }
@@ -217,6 +219,12 @@ namespace Enigma {
                  He.Colors.BLUE
              );
              about.present ();
+        }
+
+        public void action_prefs () {
+            var settings = new Preferences (this);
+            settings.parent = this;
+            settings.present ();
         }
     }
 }
