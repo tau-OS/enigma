@@ -16,7 +16,7 @@ add_project_arguments([
 
 if get_option('development')
   app_id = 'co.tauos.Enigma.Devel'
-  name_suffix = ' (Development)'
+  name_suffix = ' (Nightly)'
 else
   app_id = 'co.tauos.Enigma'
   name_suffix = ''

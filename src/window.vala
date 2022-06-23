@@ -201,22 +201,22 @@ namespace Enigma {
         }
 
         public void action_about () {
-            //  var about = new He.AboutWindow (
-            //      this,
-            //      "Enigma" + Config.NAME_SUFFIX,
-            //      Config.APP_ID,
-            //      Config.VERSION,
-            //      Config.APP_ID,
-            //      "https://github.com/tau-OS/enigma/tree/main/po",
-            //      "https://github.com/tau-OS/enigma/issues",
-            //      "catalogue://co.tauos.Enigma",
-            //      {"Lains", "Lea"},
-            //      {"Lains", "Lea"},
-            //      2022,
-            //      He.AboutWindow.Licenses.GPLv3,
-            //      He.Colors.BLUE
-            //  );
-            //  about.present ();
+             var about = new He.AboutWindow (
+                 this,
+                 "Enigma" + Config.NAME_SUFFIX,
+                 Config.APP_ID,
+                 Config.VERSION,
+                 Config.APP_ID,
+                 "https://github.com/tau-OS/enigma/tree/main/po",
+                 "https://github.com/tau-OS/enigma/issues",
+                 "catalogue://co.tauos.Enigma",
+                 {"Lains", "Lea"},
+                 {"Lains", "Lea"},
+                 2022,
+                 He.AboutWindow.Licenses.GPLv3,
+                 He.Colors.BLUE
+             );
+             about.present ();
         }
     }
 }

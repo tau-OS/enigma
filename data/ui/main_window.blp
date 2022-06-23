@@ -11,6 +11,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
     He.AppBar title {
       flat: true;
       show-buttons: true;
+      show-back: false;
 
       MenuButton menu_button {
         icon-name: "open-menu-symbolic";
@@ -32,6 +33,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
 
       Revealer search_revealer {
         reveal-child: bind search_button.active;
+        margin-start: 18;
 
         SearchEntry search_entry {
           placeholder-text: "Search text…";
@@ -42,6 +44,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
 
       TextView text_box {
         vexpand: true;
+        hexpand: true;
         wrap-mode: word;
         left-margin: 18;
         right-margin: 18;
