@@ -27,10 +27,6 @@ template EnigmaMainWindow : He.ApplicationWindow {
       title: bind EnigmaMainWindow.file_name;
       has-margins: false;
 
-      styles [
-        "eni-view"
-      ]
-
       Revealer search_revealer {
         reveal-child: bind search_button.active;
         margin-start: 18;

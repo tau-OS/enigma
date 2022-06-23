@@ -210,7 +210,7 @@ namespace Enigma {
                  "https://github.com/tau-OS/enigma/tree/main/po",
                  "https://github.com/tau-OS/enigma/issues",
                  "catalogue://co.tauos.Enigma",
-                 {"Lains", "Lea"},
+                 {},
                  {"Lains", "Lea"},
                  2022,
                  He.AboutWindow.Licenses.GPLv3,
