@@ -32,7 +32,7 @@ namespace Enigma {
         [GtkChild]
         unowned Gtk.Button save_as_button;
         [GtkChild]
-        unowned Gtk.TextView text_box;
+        unowned GtkSource.View text_box;
         [GtkChild]
         unowned Gtk.SearchEntry search_entry;
 
@@ -125,9 +125,63 @@ namespace Enigma {
                 return true;
             });
 
+            var settings = new Settings ();
+            switch (settings.font_size) {
+                case "'small'":
+                    text_box.add_css_class ("sml-font");
+                    text_box.remove_css_class ("med-font");
+                    text_box.remove_css_class ("big-font");
+                    break;
+                default:
+                case "'medium'":
+                    text_box.remove_css_class ("sml-font");
+                    text_box.add_css_class ("med-font");
+                    text_box.remove_css_class ("big-font");
+                    break;
+                case "'large'":
+                    text_box.remove_css_class ("sml-font");
+                    text_box.remove_css_class ("med-font");
+                    text_box.add_css_class ("big-font");
+                    break;
+            }
+            settings.notify["font-size"].connect (() => {
+                switch (settings.font_size) {
+                    case "'small'":
+                        text_box.add_css_class ("sml-font");
+                        text_box.remove_css_class ("med-font");
+                        text_box.remove_css_class ("big-font");
+                        break;
+                    default:
+                    case "'medium'":
+                        text_box.remove_css_class ("sml-font");
+                        text_box.add_css_class ("med-font");
+                        text_box.remove_css_class ("big-font");
+                        break;
+                    case "'large'":
+                        text_box.remove_css_class ("sml-font");
+                        text_box.remove_css_class ("med-font");
+                        text_box.add_css_class ("big-font");
+                        break;
+                }
+            });
+
+            show_line_numbers ();
+            settings.notify["show-line-numbers"].connect (() => {
+                if (settings.show_line_numbers) {
+                    text_box.set_show_line_numbers (true);
+                } else {
+                    text_box.set_show_line_numbers (false);
+                }
+            });
+
             // Window
             this.set_size_request (360, 360);
             this.show ();
+        }
+
+        public void show_line_numbers () {
+            var settings = new Settings ();
+            text_box.bind_property ("show-line-numbers", settings, "show-line-numbers", SYNC_CREATE);
         }
 
         [GtkCallback]

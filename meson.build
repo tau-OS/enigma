@@ -1,6 +1,6 @@
 project('co.tauos.Enigma', 'vala',
         version: '0.1.0',
-        meson_version: '>= 0.59.0'
+        meson_version: '>= 0.50.0'
 )
 
 gnome = import('gnome')
@@ -43,6 +43,7 @@ subdir('data')
 sources = [
   'src/app.vala',
   'src/prefs.vala',
+  'src/settings.vala',
   'src/utils.vala',
   'src/window.vala',
 ]
@@ -55,6 +56,7 @@ dependencies = [
   dependency('gee-0.8'),
   dependency('libhelium-1'),
   dependency('gmodule-2.0'),
+  dependency('gtksourceview-5'),
   meson.get_compiler('c').find_library('m', required: true)
 ]
 

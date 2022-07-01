@@ -1,7 +1,7 @@
 {
     "app-id" : "co.tauos.Enigma",
     "runtime" : "co.tauos.Platform",
-    "runtime-version" : "1.1",
+    "runtime-version" : "stable",
     "sdk" : "co.tauos.Sdk",
     "command" : "co.tauos.Enigma",
     "rename-icon" : "co.tauos.Enigma",
@@ -26,6 +26,24 @@
         "*.la"
     ],
     "modules" : [
+        {
+            "name" : "gtksourceview",
+            "buildsystem" : "meson",
+            "config-opts" : [
+                "-Dinstall_tests=false",
+                "-Dintrospection=enabled",
+                "-Dvapi=true",
+                "-Dgtk_doc=false",
+                "-Dsysprof=false"
+            ],
+            "sources" : [
+                {
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
+                    "tag": "5.4.2"
+                }
+            ]
+        },
         {
             "name" : "enigma",
             "builddir" : true,

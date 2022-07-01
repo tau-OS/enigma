@@ -1,4 +1,14 @@
 <schemalist>
 	<schema id="co.tauos.Enigma" path="/co/tauos/Enigma/">
+		<key type="s" name="font-size">
+			<default>"'medium'"</default>
+			<summary>Font Size</summary>
+			<description>The size of the font used in the editor. (Small, Medium, Large)</description>
+		</key>
+		<key type="b" name="show-line-numbers">
+			<default>false</default>
+			<summary>Show Numbers</summary>
+			<description>Show line numbers on the side of the editor.</description>
+		</key>
 	</schema>
 </schemalist>

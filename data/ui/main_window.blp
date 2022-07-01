@@ -1,5 +1,6 @@
 using Gtk 4.0;
 using He 1;
+using GtkSource 5;
 
 template EnigmaMainWindow : He.ApplicationWindow {
   default-width: "800";
@@ -38,7 +39,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
         }
       }
 
-      TextView text_box {
+      GtkSource.View text_box {
         vexpand: true;
         hexpand: true;
         wrap-mode: word;

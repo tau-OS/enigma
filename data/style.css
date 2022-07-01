@@ -4,3 +4,15 @@
 entry.search {
     border-radius: 99px;
 }
+
+.big-font {
+    font-size: 1.4rem;
+}
+
+.med-font {
+    font-size: 1.1rem;
+}
+
+.sml-font {
+    font-size: 0.9rem;
+}

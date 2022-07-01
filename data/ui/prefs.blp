@@ -1,0 +1,32 @@
+using Gtk 4.0;
+using He 1;
+
+template EnigmaPreferences : He.SettingsWindow {
+  He.SettingsPage {
+    He.ContentBlock {
+      title: "Font Size";
+      hexpand: true;
+
+      Box {
+        CheckButton sml {
+          label: "Small";
+        }
+        CheckButton mid {
+          group: sml;
+          label: "Default";
+          active: true;
+        }
+        CheckButton big {
+          group: sml;
+          label: "Large";
+        }
+      }
+    }
+    He.ContentBlock {
+      title: "Show Line Numbers";
+      hexpand: true;
+
+      Switch sn {}
+    }
+  }
+}
