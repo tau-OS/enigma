@@ -32,7 +32,7 @@ add_project_arguments(
 
 subdir('data')
 
-asresources += [
+sources = [
   'src/app.vala',
   'src/prefs.vala',
   'src/settings.vala',
@@ -54,6 +54,7 @@ dependencies = [
 
 executable(
   meson.project_name(),
+  sources,
   asresources,
   dependencies: dependencies,
   vala_args: [
