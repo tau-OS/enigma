@@ -53,16 +53,7 @@ install_data(
 )
 
 subdir('icons')
-
-blueprints = custom_target('blueprints',
-  input: files(
-    'ui/main_window.blp',
-    'ui/menu.blp',
-    'ui/prefs.blp',
-  ),
-  output: ['main_window.ui', 'menu.ui', 'prefs.ui'],
-  command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
-)
+subdir('ui')
 
 asresources = gnome.compile_resources(
   'asresources',
