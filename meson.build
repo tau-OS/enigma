@@ -6,14 +6,6 @@ project('co.tauos.Enigma', 'vala',
 gnome = import('gnome')
 i18n = import('i18n')
 
-add_project_arguments([
-		'--target-glib=2.68',
-    '--gresourcesdir',
-    meson.current_build_dir() / 'data',
-	],
-	language: 'vala',
-)
-
 if get_option('development')
   app_id = 'co.tauos.Enigma.Devel'
   name_suffix = ' (Nightly)'
@@ -40,7 +32,7 @@ add_project_arguments(
 
 subdir('data')
 
-sources = [
+asresources += [
   'src/app.vala',
   'src/prefs.vala',
   'src/settings.vala',
@@ -62,10 +54,13 @@ dependencies = [
 
 executable(
   meson.project_name(),
-  sources,
   asresources,
   dependencies: dependencies,
-  vala_args: [meson.project_source_root() + '/src/config.vapi'],
+  vala_args: [
+	'--target-glib=2.50',
+	'--gresourcesdir', meson.current_build_dir() / 'data',
+	meson.project_source_root() + '/src/config.vapi'
+  ],
   install : true
 )
 
