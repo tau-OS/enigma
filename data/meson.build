@@ -60,7 +60,7 @@ blueprints = custom_target('blueprints',
     'ui/menu.blp',
     'ui/prefs.blp',
   ),
-  output: '.',
+  output: ['main_window.ui', 'menu.ui', 'prefs.ui'],
   command: [find_program('blueprint-compiler'), 'batch-compile', '@OUTPUT@', '@CURRENT_SOURCE_DIR@', '@INPUT@'],
 )
 
