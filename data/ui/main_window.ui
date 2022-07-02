@@ -61,6 +61,7 @@
           <object class="HeBottomBar">
             <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name_ext" bind-flags="sync-create"/>
             <property name="description" bind-source="EnigmaMainWindow" bind-property="file_line_count" bind-flags="sync-create"/>
+            <property name="collapse_actions">0</property>
             <child type="left">
               <object class="HeIconicButton" id="new_button">
                 <property name="icon">document-new-symbolic</property>
