@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk" version="4.0"/>
+  <template class="EnigmaMainWindow" parent="ApplicationWindow">
+    <property name="default-width">800</property>
+    <property name="default-height">600</property>
+    <child>
+      <object class="GtkBox" id="main_box">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="HeAppBar" id="title">
+            <property name="flat">true</property>
+            <property name="show-buttons">true</property>
+            <property name="show-back">false</property>
+            <child>
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="HeViewMono" id="file_view">
+            <property name="vexpand">true</property>
+            <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+            <property name="has-margins">false</property>
+            <child>
+              <object class="GtkRevealer" id="search_revealer">
+                <property name="reveal-child" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
+                <property name="margin-start">18</property>
+                <child>
+                  <object class="GtkSearchEntry" id="search_entry">
+                    <property name="placeholder-text">Search text…</property>
+                    <property name="halign">start</property>
+                    <signal name="search-changed" handler="on_search_activate"/>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkSourceView" id="text_box">
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+                <property name="wrap-mode">word</property>
+                <property name="left-margin">18</property>
+                <property name="right-margin">18</property>
+                <property name="top-margin">18</property>
+                <property name="bottom-margin">18</property>
+                <property name="pixels-above-lines">3</property>
+                <property name="pixels-inside-wrap">3</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="HeBottomBar">
+            <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name_ext" bind-flags="sync-create"/>
+            <property name="description" bind-source="EnigmaMainWindow" bind-property="file_line_count" bind-flags="sync-create"/>
+            <child type="left">
+              <object class="HeIconicButton" id="new_button">
+                <property name="icon">document-new-symbolic</property>
+              </object>
+            </child>
+            <child type="left">
+              <object class="HeIconicButton" id="open_button">
+                <property name="icon">document-open-symbolic</property>
+              </object>
+            </child>
+            <child type="left">
+              <object class="HeIconicButton" id="save_as_button">
+                <property name="icon">document-save-as-symbolic</property>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

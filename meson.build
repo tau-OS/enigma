@@ -57,9 +57,9 @@ executable(
   asresources,
   dependencies: dependencies,
   vala_args: [
-	'--target-glib=2.50',
-	'--gresourcesdir', meson.current_build_dir() / 'data',
-	meson.project_source_root() + '/src/config.vapi'
+	  '--target-glib=2.50',
+	  '--gresourcesdir', meson.current_build_dir() / 'data',
+	  meson.project_source_root() + '/src/config.vapi'
   ],
   install : true
 )

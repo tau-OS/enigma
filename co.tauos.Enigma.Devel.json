@@ -45,17 +45,6 @@
             ]
         },
         {
-            "name": "blueprint-compiler",
-            "buildsystem": "meson",
-            "sources": [
-              {
-                "type": "git",
-                "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler",
-                "branch": "main"
-              }
-            ]
-        },
-        {
             "name" : "enigma",
             "builddir" : true,
             "buildsystem" : "meson",
