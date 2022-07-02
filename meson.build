@@ -1,10 +1,17 @@
 project('co.tauos.Enigma', 'vala',
         version: '0.1.0',
-        meson_version: '>= 0.59.0'
+        meson_version: '>= 0.50.0'
 )
 
 gnome = import('gnome')
 i18n = import('i18n')
+
+add_project_arguments([
+    '--target-glib=2.68',
+    '--gresourcesdir', meson.current_build_dir() / 'data',
+  ],
+  language: 'vala',
+)
 
 if get_option('development')
   app_id = 'co.tauos.Enigma.Devel'
@@ -57,11 +64,7 @@ executable(
   sources,
   asresources,
   dependencies: dependencies,
-  vala_args: [
-	  '--target-glib=2.50',
-	  '--gresourcesdir', meson.current_build_dir() / 'data',
-	  meson.project_source_root() + '/src/config.vapi'
-  ],
+  vala_args: [meson.project_source_root() + '/src/config.vapi'],
   install : true
 )
 
