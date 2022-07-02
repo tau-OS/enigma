@@ -55,6 +55,12 @@
                 {
                     "type" : "dir",
                     "path" : "."
+                },
+                {
+                    "type": "git",
+                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
+                    "branch": "main",
+                    "dest": "./subprojects/blueprint-compiler"
                 }
             ]
         }
