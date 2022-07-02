@@ -62,17 +62,17 @@
             <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name_ext" bind-flags="sync-create"/>
             <property name="description" bind-source="EnigmaMainWindow" bind-property="file_line_count" bind-flags="sync-create"/>
             <property name="collapse_actions">0</property>
-            <child type="left">
+            <child>
               <object class="HeIconicButton" id="new_button">
                 <property name="icon">document-new-symbolic</property>
               </object>
             </child>
-            <child type="left">
+            <child>
               <object class="HeIconicButton" id="open_button">
                 <property name="icon">document-open-symbolic</property>
               </object>
             </child>
-            <child type="left">
+            <child>
               <object class="HeIconicButton" id="save_as_button">
                 <property name="icon">document-save-as-symbolic</property>
               </object>
