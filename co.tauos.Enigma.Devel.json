@@ -5,6 +5,7 @@
     "sdk" : "co.tauos.Sdk",
     "command" : "co.tauos.Enigma",
     "finish-args" : [
+        "--device=dri",
         "--filesystem=xdg-run/gvfsd",
         "--socket=wayland",
         "--socket=fallback-x11",

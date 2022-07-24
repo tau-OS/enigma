@@ -6,6 +6,7 @@
     "command" : "co.tauos.Enigma",
     "rename-icon" : "co.tauos.Enigma",
     "finish-args" : [
+        "--device=dri",
         "--filesystem=xdg-run/gvfsd",
         "--socket=wayland",
         "--socket=fallback-x11",
