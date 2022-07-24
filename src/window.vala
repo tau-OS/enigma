@@ -111,10 +111,10 @@ namespace Enigma {
             theme.add_resource_path ("/co/tauos/Enigma/");
 
             // Text View
-            new_button.clicked.connect (() => on_new_button_clicked);
+            new_button.clicked.connect (() => on_new_button_clicked ());
             open_button.clicked.connect (() => { open.begin (); });
             save_as_button.clicked.connect (() => { save.begin (); });
-            text_box.get_buffer ().changed.connect (() => on_text_box_changed);
+            text_box.get_buffer ().changed.connect (() => on_text_box_changed ());
 
             file_name = "New File";
             file_name_ext = "new_file.txt";

@@ -1,7 +1,7 @@
 {
     "app-id" : "co.tauos.Enigma.Devel",
-    "runtime" : "co.tauos.Platform",
-    "runtime-version" : "daily",
+    "runtime" : "co.tauos.Sdk",
+    "runtime-version" : "stable",
     "sdk" : "co.tauos.Sdk",
     "command" : "co.tauos.Enigma",
     "finish-args" : [
@@ -41,7 +41,7 @@
                 {
                     "type" : "git",
                     "url" : "https://gitlab.gnome.org/GNOME/gtksourceview.git",
-                    "tag": "5.4.2"
+                    "tag" : "5.4.2"
                 }
             ]
         },
@@ -58,12 +58,15 @@
                     "path" : "."
                 },
                 {
-                    "type": "git",
-                    "url": "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
-                    "branch": "main",
-                    "dest": "./subprojects/blueprint-compiler"
+                    "type" : "git",
+                    "url" : "https://gitlab.gnome.org/jwestman/blueprint-compiler.git",
+                    "branch" : "main",
+                    "dest" : "./subprojects/blueprint-compiler"
                 }
             ]
         }
-    ]
+    ],
+    "build-options" : {
+        "env" : {        }
+    }
 }
