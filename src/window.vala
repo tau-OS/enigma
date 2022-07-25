@@ -280,5 +280,18 @@ namespace Enigma {
             settings.parent = this;
             settings.present ();
         }
+
+        public void load(GLib.File file) {
+            uint8[] text;
+            try {
+                file.load_contents (null, out text, null);
+                text_box.get_buffer ().set_text ((string) text);
+                file_name = file.get_basename ().replace (".txt", "");
+                file_name_ext = file.get_basename ();
+                file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
+            } catch (Error err) {
+                print (err.message);
+            }
+        }
     }
 }

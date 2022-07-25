@@ -23,8 +23,9 @@ public class Enigma.Application : He.Application {
     };
 
     public Application () {
-        Object (application_id: Config.APP_ID);
+        base (Config.APP_ID, ApplicationFlags.HANDLES_OPEN);
     }
+
     public static int main (string[] args) {
         Intl.bindtextdomain (Config.GETTEXT_PACKAGE, Config.LOCALEDIR);
         Intl.textdomain (Config.GETTEXT_PACKAGE);
@@ -32,6 +33,7 @@ public class Enigma.Application : He.Application {
         var app = new Enigma.Application ();
         return app.run (args);
     }
+
     protected override void startup () {
         Gdk.RGBA accent_color = { 0 };
         accent_color.parse("#268EF9");
@@ -47,7 +49,13 @@ public class Enigma.Application : He.Application {
 
         new MainWindow (this);
     }
+
     protected override void activate () {
         active_window?.present ();
     }
+
+    public override void open (File[] files, string hint) {
+		base.open (files, hint);
+		new MainWindow (this).load(files[0]);
+	}
 }
