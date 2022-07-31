@@ -1,7 +1,7 @@
 [Desktop Entry]
 Name=Enigma
 Comment=Simple text editor
-Exec=@app_id@
+Exec=@app_id@ %u
 Icon=@app_id@
 Keywords=text;plain;plaintext;
 Terminal=false
