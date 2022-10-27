@@ -18,6 +18,11 @@
               </object>
             </child>
             <child>
+              <object class="GtkButton" id="open_button">
+                <property name="icon-name">document-open-symbolic</property>
+              </object>
+            </child>
+            <child>
               <object class="GtkToggleButton" id="search_button">
                 <property name="icon-name">system-search-symbolic</property>
               </object>
@@ -65,11 +70,6 @@
             <child>
               <object class="HeIconicButton" id="new_button">
                 <property name="icon">document-new-symbolic</property>
-              </object>
-            </child>
-            <child>
-              <object class="HeIconicButton" id="open_button">
-                <property name="icon">document-open-symbolic</property>
               </object>
             </child>
             <child>
