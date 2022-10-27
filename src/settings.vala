@@ -18,13 +18,11 @@
 */
 [SingleInstance]
 public class Enigma.Settings : Object {
-    private GLib.Settings settings = new GLib.Settings ("co.tauos.Enigma");
+    public GLib.Settings settings = new GLib.Settings ("co.tauos.Enigma");
     public string font_size { get; set; }
-    public bool show_line_numbers { get; set; }
 
     construct {
         settings.bind ("font-size", this, "font-size", DEFAULT);
-        settings.bind ("show-line-numbers", this, "show-line-numbers", DEFAULT);
     }
 
     public Action create_action (string key) {

@@ -28,11 +28,15 @@ namespace Enigma {
         unowned Gtk.CheckButton big;
         [GtkChild]
         unowned Gtk.Switch sn;
+        [GtkChild]
+        unowned Gtk.Switch hcl;
+        [GtkChild]
+        unowned Gtk.Switch hmb;
 
         public Preferences (MainWindow win) {
             Object (parent: win);
-
             var settings = new Settings ();
+
             switch (settings.font_size) {
                 case "'small'":
                     sml.set_active (true);
@@ -45,7 +49,6 @@ namespace Enigma {
                     big.set_active (true);
                     break;
             }
-
             sml.notify["active"].connect (() => {
                 settings.font_size = "'small'";
             });
@@ -55,13 +58,6 @@ namespace Enigma {
             big.notify["active"].connect (() => {
                 settings.font_size = "'large'";
             });
-
-            if (settings.show_line_numbers) {
-                sn.set_active (true);
-            } else {
-                sn.set_active (false);
-            }
-
             settings.notify["font-size"].connect (() => {
                 switch (settings.font_size) {
                     case "'small'":
@@ -77,20 +73,9 @@ namespace Enigma {
                 }
             });
 
-            sn.notify["active"].connect (() => {
-                if (sn.get_active()) {
-                    settings.show_line_numbers = true;
-                } else {
-                    settings.show_line_numbers = false;
-                }
-            });
-            settings.notify["show-line-numbers"].connect (() => {
-                if (settings.show_line_numbers) {
-                    sn.set_active (true);
-                } else {
-                    sn.set_active (false);
-                }
-            });
+            settings.settings.bind ("show-line-numbers", sn, "active", DEFAULT);
+            settings.settings.bind ("hilight-curr-line", hcl, "active", DEFAULT);
+            settings.settings.bind ("hilight-brackets", hmb, "active", DEFAULT);
         }
     }
 }

@@ -2,8 +2,10 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <template class="EnigmaPreferences" parent="HeSettingsWindow">
+    <property name="resizable">0</property>
     <child>
       <object class="HeSettingsPage">
+        <property name="margin-bottom">12</property>
         <child>
           <object class="HeContentBlock">
             <property name="title">Font Size</property>
@@ -37,7 +39,32 @@
             <property name="title">Show Line Numbers</property>
             <property name="hexpand">true</property>
             <child>
-              <object class="GtkSwitch" id="sn"></object>
+              <object class="GtkSwitch" id="sn">
+                <property name="valign">start</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="HeContentBlock">
+            <property name="title">Highlight Current Line</property>
+            <property name="hexpand">true</property>
+            <child>
+              <object class="GtkSwitch" id="hcl">
+                <property name="valign">start</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
+          <object class="HeContentBlock">
+            <property name="title">Highlight Brackets</property>
+            <property name="subtitle">Highlights pairs of matching brackets.</property>
+            <property name="hexpand">true</property>
+            <child>
+              <object class="GtkSwitch" id="hmb">
+                <property name="valign">start</property>
+              </object>
             </child>
           </object>
         </child>

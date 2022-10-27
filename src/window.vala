@@ -125,6 +125,7 @@ namespace Enigma {
                 return true;
             });
 
+            // Preferences
             var settings = new Settings ();
             switch (settings.font_size) {
                 case "'small'":
@@ -165,23 +166,13 @@ namespace Enigma {
                 }
             });
 
-            show_line_numbers ();
-            settings.notify["show-line-numbers"].connect (() => {
-                if (settings.show_line_numbers) {
-                    text_box.set_show_line_numbers (true);
-                } else {
-                    text_box.set_show_line_numbers (false);
-                }
-            });
+            settings.settings.bind ("show-line-numbers", text_box, "show-line-numbers", DEFAULT);
+            settings.settings.bind ("hilight-curr-line", text_box, "highlight-current-line", DEFAULT);
+            settings.settings.bind ("hilight-brackets", ((GtkSource.Buffer)text_box.get_buffer ()), "highlight-matching-brackets", DEFAULT);
 
             // Window
             this.set_size_request (360, 360);
             this.show ();
-        }
-
-        public void show_line_numbers () {
-            var settings = new Settings ();
-            text_box.bind_property ("show-line-numbers", settings, "show-line-numbers", SYNC_CREATE);
         }
 
         [GtkCallback]
@@ -199,6 +190,9 @@ namespace Enigma {
             file_name = null;
             file_name_ext = null;
             file_line_count = null;
+            file_name = "New File";
+            file_name_ext = "new_file.txt";
+            file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
             modified = false;
         }
 
@@ -208,10 +202,17 @@ namespace Enigma {
             string text;
             try {
                 GLib.FileUtils.get_contents (file_path, out text);
-                text_box.get_buffer ().set_text (text);
-                file_name = file.get_basename ().replace (".txt", "");
-                file_name_ext = file.get_basename ();
-                file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
+                if (file != null && text != null) {
+                    text_box.get_buffer ().set_text (text);
+                    file_name = file.get_basename ().replace (".txt", "");
+                    file_name_ext = file.get_basename ();
+                    file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
+                } else {
+                    text_box.get_buffer ().set_text ("");
+                    file_name = "New File";
+                    file_name_ext = "new_file.txt";
+                    file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
+                }
             } catch (Error err) {
                 print (err.message);
             }
@@ -223,6 +224,9 @@ namespace Enigma {
             text_box.get_buffer ().get_bounds (out start, out end);
             try {
                 GLib.FileUtils.set_contents (file.get_path (), text_box.get_buffer ().get_text (start, end, false));
+                file_name = file.get_basename ().replace (".txt", "");
+                file_name_ext = file.get_basename ();
+                file_line_count = "%d".printf(get_lines ()) + (_(" lines"));
                 modified = false;
             } catch (Error err) {
                 print (err.message);

@@ -10,5 +10,15 @@
 			<summary>Show Numbers</summary>
 			<description>Show line numbers on the side of the editor.</description>
 		</key>
+		<key type="b" name="hilight-curr-line">
+			<default>false</default>
+			<summary>Highlight Current Line</summary>
+			<description>Highlight the current line in the editor.</description>
+		</key>
+		<key type="b" name="hilight-brackets">
+			<default>false</default>
+			<summary>Highlight Matching Brackets</summary>
+			<description>Highlight matching brackets in the editor.</description>
+		</key>
 	</schema>
 </schemalist>
