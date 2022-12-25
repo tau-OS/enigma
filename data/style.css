@@ -1,5 +1,10 @@
 entry.search {
   border-radius: 99px;
+  background: @card_bg_color;
+}
+
+textview.view {
+  background: @card_bg_color;
 }
 
 .big-font {
