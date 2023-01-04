@@ -1,0 +1,16 @@
+# List of files installed by Meson
+# Does not contain files installed by custom scripts.
+/app/share/applications/co.tauos.Enigma.desktop
+/app/share/metainfo/co.tauos.Enigma.metainfo.xml
+/app/bin/co.tauos.Enigma
+/app/share/glib-2.0/schemas/co.tauos.Enigma.gschema.xml
+/app/share/icons/hicolor/scalable/apps/co.tauos.Enigma.svg
+/app/share/icons/hicolor/symbolic/apps/co.tauos.Enigma-symbolic.svg
+/app/share/icons/hicolor/symbolic/apps
+/app/share/icons/hicolor/symbolic
+/app/share/icons/hicolor/scalable/apps
+/app/share/glib-2.0/schemas
+/app/share/glib-2.0
+/app/bin
+/app/share/metainfo
+/app/share/applications

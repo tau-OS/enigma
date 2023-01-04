@@ -1,0 +1,44 @@
+[
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "valac -C --debug --debug --target-glib=2.68 --gresourcesdir /var/home/lains/Projects/tauos/enigma/_build/data --pkg gtksourceview-5 --pkg gmodule-2.0 --pkg libhelium-1 --pkg gee-0.8 --pkg gobject-2.0 --pkg glib-2.0 --pkg gtk4 --pkg gio-2.0 --color=always --directory co.tauos.Enigma.p --basedir ../ --gresources=../data/co.tauos.Enigma.gresources.xml /var/home/lains/Projects/tauos/enigma/src/config.vapi ../src/app.vala ../src/prefs.vala ../src/settings.vala ../src/utils.vala ../src/window.vala",
+    "file": "../src/app.vala",
+    "output": "co.tauos.Enigma.p/src/app.c"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_.._data_asresources.c.o -MF co.tauos.Enigma.p/meson-generated_.._data_asresources.c.o.d -o co.tauos.Enigma.p/meson-generated_.._data_asresources.c.o -c data/asresources.c",
+    "file": "data/asresources.c",
+    "output": "co.tauos.Enigma.p/meson-generated_.._data_asresources.c.o"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_src_app.c.o -MF co.tauos.Enigma.p/meson-generated_src_app.c.o.d -o co.tauos.Enigma.p/meson-generated_src_app.c.o -c co.tauos.Enigma.p/src/app.c",
+    "file": "co.tauos.Enigma.p/src/app.c",
+    "output": "co.tauos.Enigma.p/meson-generated_src_app.c.o"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_src_prefs.c.o -MF co.tauos.Enigma.p/meson-generated_src_prefs.c.o.d -o co.tauos.Enigma.p/meson-generated_src_prefs.c.o -c co.tauos.Enigma.p/src/prefs.c",
+    "file": "co.tauos.Enigma.p/src/prefs.c",
+    "output": "co.tauos.Enigma.p/meson-generated_src_prefs.c.o"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_src_settings.c.o -MF co.tauos.Enigma.p/meson-generated_src_settings.c.o.d -o co.tauos.Enigma.p/meson-generated_src_settings.c.o -c co.tauos.Enigma.p/src/settings.c",
+    "file": "co.tauos.Enigma.p/src/settings.c",
+    "output": "co.tauos.Enigma.p/meson-generated_src_settings.c.o"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_src_utils.c.o -MF co.tauos.Enigma.p/meson-generated_src_utils.c.o.d -o co.tauos.Enigma.p/meson-generated_src_utils.c.o -c co.tauos.Enigma.p/src/utils.c",
+    "file": "co.tauos.Enigma.p/src/utils.c",
+    "output": "co.tauos.Enigma.p/meson-generated_src_utils.c.o"
+  },
+  {
+    "directory": "/var/home/lains/Projects/tauos/enigma/_build",
+    "command": "ccache cc -Ico.tauos.Enigma.p -I. -I.. -Idata -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/gee-0.8 -I/usr/include/libbismuth-1 -I/usr/include/gio-unix-2.0 -I/app/include/gtksourceview-5 -I/usr/include/libxml2 -fdiagnostics-color=always -D_FILE_OFFSET_BITS=64 -w -O0 -g -include config.h '-DGETTEXT_PACKAGE=\"co.tauos.Enigma\"' -mfpmath=sse -msse -msse2 -pthread -mfpmath=sse -msse -msse2 -mfpmath=sse -msse -msse2 -MD -MQ co.tauos.Enigma.p/meson-generated_src_window.c.o -MF co.tauos.Enigma.p/meson-generated_src_window.c.o.d -o co.tauos.Enigma.p/meson-generated_src_window.c.o -c co.tauos.Enigma.p/src/window.c",
+    "file": "co.tauos.Enigma.p/src/window.c",
+    "output": "co.tauos.Enigma.p/meson-generated_src_window.c.o"
+  }
+]

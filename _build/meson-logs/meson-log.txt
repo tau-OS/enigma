@@ -1,0 +1,387 @@
+Build started at 2022-10-27T08:30:00.473665
+Main binary: /usr/bin/python3
+Build Options: -Dprefix=/app
+Python system: Linux
+The Meson build system
+Version: 0.63.2
+Source dir: /var/home/lains/Projects/tauos/enigma
+Build dir: /var/home/lains/Projects/tauos/enigma/_build
+Build type: native build
+Project name: co.tauos.Enigma
+Project version: 0.1.0
+meson.build:3: WARNING: Project targets '>= 0.50.0' but uses feature introduced in '0.59.0': Adding Vala language without C.
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (GCC) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version -L/app/lib
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version', '-L/app/lib']>
+linker stdout:
+GNU ld (GNU Binutils) 2.38
+Copyright (C) 2022 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 12.1.0
+/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/ld -plugin /usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccXtuUia.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/crtbeginS.o -L/app/lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/crtendS.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C compiler: ccache cc
+Is cross compiler: False.
+Sanity check compiler command line: ccache cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64 -L/app/lib
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /var/home/lains/Projects/tauos/enigma/_build/meson-private/sanitycheckc.exe
+C compiler for the host machine: ccache cc (gcc 12.1.0 "cc (GCC) 12.1.0")
+C linker for the host machine: cc ld.bfd 2.38
+Running compile:
+Working directory:  /tmp/tmpufz5l12m
+Command line:  valac /tmp/tmpufz5l12m/testfile.vala -C 
+
+Code:
+ class MesonSanityCheck : Object { }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Vala compiler for the host machine: valac (valac 0.56.3)
+-----
+Detecting compiler via: cc --version
+compiler returned <Popen: returncode: 0 args: ['cc', '--version']>
+compiler stdout:
+cc (GCC) 12.1.0
+Copyright (C) 2022 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+
+compiler stderr:
+
+Running command: cc -E -dM -
+-----
+Detecting linker via: cc -Wl,--version -L/app/lib
+linker returned <Popen: returncode: 0 args: ['cc', '-Wl,--version', '-L/app/lib']>
+linker stdout:
+GNU ld (GNU Binutils) 2.38
+Copyright (C) 2022 Free Software Foundation, Inc.
+This program is free software; you may redistribute it under the terms of
+the GNU General Public License version 3 or (at your option) a later version.
+This program has absolutely no warranty.
+
+linker stderr:
+collect2 version 12.1.0
+/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/ld -plugin /usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/lto-wrapper -plugin-opt=-fresolution=/tmp/ccn1msLr.res -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lgcc_s --build-id --eh-frame-hdr -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -pie /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/Scrt1.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/crti.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/crtbeginS.o -L/app/lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../lib64 -L/lib/x86_64-linux-gnu -L/lib/../lib64 -L/usr/lib/x86_64-linux-gnu -L/usr/lib/../lib64 -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib -L/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../.. --version -lgcc --push-state --as-needed -lgcc_s --pop-state -lc -lgcc --push-state --as-needed -lgcc_s --pop-state /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/crtendS.o /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/crtn.o
+
+Sanity testing C compiler: ccache cc
+Is cross compiler: False.
+Sanity check compiler command line: ccache cc sanitycheckc.c -o sanitycheckc.exe -D_FILE_OFFSET_BITS=64 -L/app/lib
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /var/home/lains/Projects/tauos/enigma/_build/meson-private/sanitycheckc.exe
+C compiler for the build machine: ccache cc (gcc 12.1.0 "cc (GCC) 12.1.0")
+C linker for the build machine: cc ld.bfd 2.38
+Using cached compile:
+Cached command line:   
+
+Code:
+ class MesonSanityCheck : Object { }
+Cached compiler stdout:
+ 
+Cached compiler stderr:
+ 
+Vala compiler for the build machine: valac (valac 0.56.3)
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: x86_64
+Target machine cpu: x86_64
+Configuring config.h using configuration
+Configuring co.tauos.Enigma.desktop.in using configuration
+Program msgfmt found: YES (/usr/bin/msgfmt)
+Program desktop-file-validate found: YES (/usr/bin/desktop-file-validate)
+Adding test "validate-desktop"
+Configuring co.tauos.Enigma.metainfo.xml.in using configuration
+Program appstream-util found: YES (/usr/bin/appstream-util)
+Adding test "validate-appstream"
+Program glib-compile-schemas found: YES (/usr/bin/glib-compile-schemas)
+Pkg-config binary for 0 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.8.0)
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.74.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+-lglib-2.0
+Running compile:
+Working directory:  /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpkn9ickls
+Command line:  ccache cc -L/app/lib /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpkn9ickls/testfile.c -o /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpkn9ickls/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpx4a4psre
+Command line:  ccache cc /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpx4a4psre/testfile.c -o /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpx4a4psre/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/
+programs: =/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/libexec/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/../lib64/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../lib64/:/lib/x86_64-unknown-linux-gnu/12.1.0/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Program glib-compile-resources found: YES (/usr/bin/glib-compile-resources)
+Pkg-config binary for 1 is not cached.
+Pkg-config binary missing from cross or native file, or env var undefined.
+Trying a default Pkg-config fallback at pkg-config
+Found pkg-config: /usr/bin/pkg-config (1.8.0)
+Determining dependency 'gio-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gio-2.0` -> 0
+2.74.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gio-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gio-2.0` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgio-2.0 -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gio-2.0` -> 0
+-lgio-2.0 -lgobject-2.0 -lglib-2.0
+Running compile:
+Working directory:  /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmplrkeyel5
+Command line:  ccache cc -L/app/lib /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmplrkeyel5/testfile.c -o /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmplrkeyel5/output.exe -D_FILE_OFFSET_BITS=64 -O0 
+
+Code:
+ #include<stdio.h>
+        
+        int main(void) {
+            printf("%ld\n", (long)(sizeof(void *)));
+            return 0;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Program stdout:
+
+8
+
+Program stderr:
+
+
+Running compile:
+Working directory:  /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpq0yp891j
+Command line:  ccache cc /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpq0yp891j/testfile.c -o /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmpq0yp891j/output.obj -c -D_FILE_OFFSET_BITS=64 -O0 --print-search-dirs 
+
+Code:
+ 
+Compiler stdout:
+ install: /usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/
+programs: =/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/libexec/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/libexec/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/bin/
+libraries: =/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/../lib64/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../x86_64-linux-gnu/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../lib64/:/lib/x86_64-unknown-linux-gnu/12.1.0/:/lib/x86_64-linux-gnu/:/lib/../lib64/:/usr/lib/x86_64-unknown-linux-gnu/12.1.0/:/usr/lib/x86_64-linux-gnu/:/usr/lib/../lib64/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../../x86_64-unknown-linux-gnu/lib/:/usr/lib/gcc/x86_64-unknown-linux-gnu/12.1.0/../../../:/lib/:/usr/lib/
+
+Compiler stderr:
+ 
+Run-time dependency gio-2.0 found: YES 2.74.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'gtk4' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gtk4` -> 0
+4.8.1
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gtk4` -> 0
+-I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -mfpmath=sse -msse -msse2 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gtk4` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gtk4` -> 0
+-lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gtk4 found: YES 4.8.1
+Pkg-config binary for 1 is cached.
+Determining dependency 'glib-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion glib-2.0` -> 0
+2.74.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags glib-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+-L/usr/lib/x86_64-linux-gnu -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs glib-2.0` -> 0
+-lglib-2.0
+Run-time dependency glib-2.0 found: YES 2.74.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'gobject-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gobject-2.0` -> 0
+2.74.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gobject-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gobject-2.0` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gobject-2.0` -> 0
+-lgobject-2.0 -lglib-2.0
+Run-time dependency gobject-2.0 found: YES 2.74.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'gee-0.8' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gee-0.8` -> 0
+0.20.6
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gee-0.8` -> 0
+-I/usr/include/gee-0.8 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gee-0.8` -> 0
+-L/usr/lib/x86_64-linux-gnu -lgee-0.8 -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gee-0.8` -> 0
+-lgee-0.8 -lgobject-2.0 -lglib-2.0
+Run-time dependency gee-0.8 found: YES 0.20.6
+Pkg-config binary for 1 is cached.
+Determining dependency 'libhelium-1' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion libhelium-1` -> 0
+1
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags libhelium-1` -> 0
+-I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -I/usr/include/libbismuth-1 -mfpmath=sse -msse -msse2 -I/usr/include/gio-unix-2.0 -I/usr/include/gee-0.8 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs libhelium-1` -> 0
+-L/usr/lib/x86_64-linux-gnu -lhelium-1 -lbismuth-1 -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs libhelium-1` -> 0
+-lhelium-1 -lbismuth-1 -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency libhelium-1 found: YES 1
+Pkg-config binary for 1 is cached.
+Determining dependency 'gmodule-2.0' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gmodule-2.0` -> 0
+2.74.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gmodule-2.0` -> 0
+-I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gmodule-2.0` -> 0
+-Wl,--export-dynamic -L/usr/lib/x86_64-linux-gnu -lgmodule-2.0 -pthread -lglib-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gmodule-2.0` -> 0
+-Wl,--export-dynamic -lgmodule-2.0 -pthread -lglib-2.0 -lglib-2.0
+Run-time dependency gmodule-2.0 found: YES 2.74.0
+Pkg-config binary for 1 is cached.
+Determining dependency 'gtksourceview-5' with pkg-config executable '/usr/bin/pkg-config'
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --modversion gtksourceview-5` -> 0
+5.4.2
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --cflags gtksourceview-5` -> 0
+-I/app/include/gtksourceview-5 -I/usr/include/glib-2.0 -I/usr/lib/x86_64-linux-gnu/glib-2.0/include -I/usr/include/sysprof-4 -I/usr/include/libmount -I/usr/include/blkid -I/usr/include/gtk-4.0 -I/usr/include/pango-1.0 -I/usr/include/harfbuzz -I/usr/include/freetype2 -I/usr/include/libpng16 -I/usr/include/fribidi -I/usr/include/cairo -I/usr/include/pixman-1 -I/usr/include/gdk-pixbuf-2.0 -I/usr/include/graphene-1.0 -I/usr/lib/x86_64-linux-gnu/graphene-1.0/include -mfpmath=sse -msse -msse2 -I/usr/include/libxml2 -pthread
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+env[PKG_CONFIG_ALLOW_SYSTEM_LIBS]: 1
+Called `/usr/bin/pkg-config --libs gtksourceview-5` -> 0
+-L/app/lib -lgtksourceview-5 -L/usr/lib/x86_64-linux-gnu -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --libs gtksourceview-5` -> 0
+-L/app/lib -lgtksourceview-5 -lgtk-4 -lpangocairo-1.0 -lpango-1.0 -lharfbuzz -lgdk_pixbuf-2.0 -lcairo-gobject -lcairo -lgraphene-1.0 -lgio-2.0 -lgobject-2.0 -lglib-2.0
+Run-time dependency gtksourceview-5 found: YES 5.4.2
+Running compile:
+Working directory:  /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmp9lr2d_pp
+Command line:  ccache cc -L/app/lib /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmp9lr2d_pp/testfile.c -o /var/home/lains/Projects/tauos/enigma/_build/meson-private/tmp9lr2d_pp/output.exe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -lm -Wl,--end-group -Wl,--allow-shlib-undefined 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library m found: YES
+meson.build:67: WARNING: Project targets '>= 0.50.0' but uses feature introduced in '0.56.0': meson.project_source_root.
+Program msginit found: YES (/usr/bin/msginit)
+Program msgmerge found: YES (/usr/bin/msgmerge)
+Program xgettext found: YES (/usr/bin/xgettext)
+meson.build:76: WARNING: Project targets '>= 0.50.0' but uses feature introduced in '0.59.0': update_desktop_database arg in gnome.post_install.
+meson.build:76: WARNING: Project targets '>= 0.50.0' but uses feature introduced in '0.57.0': gnome.post_install.
+Dependency gio-2.0 found: YES 2.74.0 (cached)
+env[PKG_CONFIG_PATH]: /app/lib/pkgconfig:/app/share/pkgconfig:/usr/lib/pkgconfig:/usr/share/pkgconfig
+Called `/usr/bin/pkg-config --variable=glib_compile_schemas gio-2.0` -> 0
+/usr/bin/glib-compile-schemas
+Got pkgconfig variable glib_compile_schemas : /usr/bin/glib-compile-schemas
+Program glib-compile-schemas found: YES (/usr/bin/glib-compile-schemas)
+Program gtk4-update-icon-cache found: YES (/usr/bin/gtk4-update-icon-cache)
+Program update-desktop-database found: YES (/usr/bin/update-desktop-database)
+Build targets in project: 9
+WARNING: Project specifies a minimum meson_version '>= 0.50.0' but uses features which were added in newer versions:
+ * 0.56.0: {'meson.project_source_root'}
+ * 0.57.0: {'gnome.post_install'}
+ * 0.59.0: {'update_desktop_database arg in gnome.post_install', 'Adding Vala language without C'}
+
+co.tauos.Enigma 0.1.0
+
+  User defined options
+    prefix: /app
+
+Found ninja-1.11.1 at /usr/bin/ninja
+Failed to guess install tag for /app/share/glib-2.0/schemas/co.tauos.Enigma.gschema.xml
+Failed to guess install tag for /app/share/icons/hicolor/scalable/apps/co.tauos.Enigma.svg
+Failed to guess install tag for /app/share/icons/hicolor/symbolic/apps/co.tauos.Enigma-symbolic.svg
