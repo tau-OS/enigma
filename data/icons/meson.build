@@ -6,8 +6,8 @@ install_data(
 )
 
 install_data(
-  '@0@.Devel.svg'.format(app_id),
-  install_dir: join_paths(icondir, 'scalable/apps'),
+  '@0@.svg'.format(app_id),
+  install_dir: join_paths(icondir, 'scalable/apps', '@0@.Devel.svg'.format(app_id)),
 )
 
 install_data(
