@@ -1,6 +1,9 @@
 entry.search {
-  border-radius: 99px;
-  background: @card_bg_color;
+  border-radius: 999px;
+}
+
+.disclosure-button button {
+  border-radius: 999px;
 }
 
 textview.view {
