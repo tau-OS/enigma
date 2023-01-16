@@ -21,7 +21,7 @@
             <child>
               <object class="GtkLabel">
                 <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
-                <property name="margin-top">12</property>
+                <property name="margin-top">18</property>
                 <property name="margin-start">18</property>
                 <property name="margin-end">18</property>
                 <style>
@@ -35,7 +35,7 @@
                 <property name="halign">end</property>
                 <property name="margin-start">18</property>
                 <property name="margin-end">18</property>
-                <property name="margin-top">12</property>
+                <property name="margin-top">16</property>
                 <property name="spacing">12</property>
                 <child>
                   <object class="GtkToggleButton" id="search_button">
