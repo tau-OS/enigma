@@ -17,14 +17,25 @@
         <child>
           <object class="HeViewMono" id="file_view">
             <property name="vexpand">true</property>
-            <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
             <property name="has-margins">false</property>
+            <child>
+              <object class="GtkLabel">
+                <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+                <property name="margin-top">12</property>
+                <property name="margin-start">18</property>
+                <property name="margin-end">18</property>
+                <style>
+                  <class name="view-title" />
+                </style>
+              </object>
+            </child>
             <child>
               <object class="GtkBox">
                 <property name="hexpand">true</property>
                 <property name="halign">end</property>
                 <property name="margin-start">18</property>
                 <property name="margin-end">18</property>
+                <property name="margin-top">12</property>
                 <property name="spacing">12</property>
                 <child>
                   <object class="GtkToggleButton" id="search_button">
@@ -49,6 +60,8 @@
                 <property name="reveal-child" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
                 <property name="margin-start">18</property>
                 <property name="margin-end">18</property>
+                <property name="margin-top">6</property>
+                <property name="margin-bottom">6</property>
                 <child>
                   <object class="GtkSearchEntry" id="search_entry">
                     <property name="placeholder-text">Search text…</property>
