@@ -15,74 +15,69 @@
           </object>
         </child>
         <child>
-          <object class="HeViewMono" id="file_view">
-            <property name="vexpand">true</property>
-            <property name="has-margins">false</property>
+          <object class="GtkLabel">
+            <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+            <property name="margin-top">16</property>
+            <property name="margin-start">18</property>
+            <property name="margin-end">18</property>
+            <property name="halign">start</property>
+            <style>
+              <class name="view-title" />
+            </style>
+          </object>
+        </child>
+        <child>
+          <object class="GtkBox">
+            <property name="hexpand">true</property>
+            <property name="halign">end</property>
+            <property name="margin-start">18</property>
+            <property name="margin-end">18</property>
+            <property name="margin-top">16</property>
+            <property name="spacing">12</property>
             <child>
-              <object class="GtkLabel">
-                <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
-                <property name="margin-top">18</property>
-                <property name="margin-start">18</property>
-                <property name="margin-end">18</property>
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
                 <style>
-                  <class name="view-title" />
+                  <class name="disclosure-button" />
                 </style>
               </object>
             </child>
             <child>
-              <object class="GtkBox">
-                <property name="hexpand">true</property>
-                <property name="halign">end</property>
-                <property name="margin-start">18</property>
-                <property name="margin-end">18</property>
-                <property name="margin-top">16</property>
-                <property name="spacing">12</property>
-                <child>
-                  <object class="GtkToggleButton" id="search_button">
-                    <property name="icon-name">system-search-symbolic</property>
-                    <style>
-                      <class name="disclosure-button" />
-                    </style>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkMenuButton" id="menu_button">
-                    <property name="icon-name">open-menu-symbolic</property>
-                    <style>
-                      <class name="disclosure-button" />
-                    </style>
-                  </object>
-                </child>
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
+                <style>
+                  <class name="disclosure-button" />
+                </style>
               </object>
             </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkRevealer" id="search_revealer">
+            <property name="reveal-child" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
+            <property name="margin-start">18</property>
+            <property name="margin-end">18</property>
+            <property name="margin-top">6</property>
+            <property name="margin-bottom">6</property>
             <child>
-              <object class="GtkRevealer" id="search_revealer">
-                <property name="reveal-child" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
-                <property name="margin-start">18</property>
-                <property name="margin-end">18</property>
-                <property name="margin-top">6</property>
-                <property name="margin-bottom">6</property>
-                <child>
-                  <object class="GtkSearchEntry" id="search_entry">
-                    <property name="placeholder-text">Search text…</property>
-                    <signal name="search-changed" handler="on_search_activate"/>
-                  </object>
-                </child>
+              <object class="GtkSearchEntry" id="search_entry">
+                <property name="placeholder-text">Search text…</property>
+                <signal name="search-changed" handler="on_search_activate"/>
               </object>
             </child>
-            <child>
-              <object class="GtkSourceView" id="text_box">
-                <property name="vexpand">true</property>
-                <property name="hexpand">true</property>
-                <property name="wrap-mode">word</property>
-                <property name="left-margin">18</property>
-                <property name="right-margin">18</property>
-                <property name="top-margin">18</property>
-                <property name="bottom-margin">18</property>
-                <property name="pixels-above-lines">3</property>
-                <property name="pixels-inside-wrap">3</property>
-              </object>
-            </child>
+          </object>
+        </child>
+        <child>
+          <object class="GtkSourceView" id="text_box">
+            <property name="vexpand">true</property>
+            <property name="hexpand">true</property>
+            <property name="wrap-mode">word</property>
+            <property name="left-margin">18</property>
+            <property name="right-margin">18</property>
+            <property name="top-margin">18</property>
+            <property name="bottom-margin">18</property>
+            <property name="pixels-above-lines">3</property>
+            <property name="pixels-inside-wrap">3</property>
           </object>
         </child>
         <child>
