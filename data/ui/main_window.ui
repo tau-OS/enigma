@@ -14,13 +14,13 @@
             <property name="show-back">false</property>
             <property name="viewtitle_label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
             <child>
-              <object class="GtkToggleButton" id="search_button">
-                <property name="icon-name">system-search-symbolic</property>
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
               </object>
             </child>
             <child>
-              <object class="GtkMenuButton" id="menu_button">
-                <property name="icon-name">open-menu-symbolic</property>
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
               </object>
             </child>
           </object>

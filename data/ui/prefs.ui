@@ -7,63 +7,70 @@
       <object class="HeSettingsPage">
         <property name="margin-bottom">12</property>
         <child>
-          <object class="HeContentBlock">
-            <property name="title">Font Size</property>
-            <property name="hexpand">true</property>
+          <object class="HeSettingsList">
             <child>
-              <object class="GtkBox">
+              <object class="HeSettingsRow">
+                <property name="title">Font Size</property>
+                <property name="hexpand">true</property>
                 <child>
-                  <object class="GtkCheckButton" id="sml">
-                    <property name="label">Small</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkCheckButton" id="mid">
-                    <property name="group">sml</property>
-                    <property name="label">Default</property>
-                    <property name="active">true</property>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkCheckButton" id="big">
-                    <property name="group">sml</property>
-                    <property name="label">Large</property>
+                  <object class="GtkBox">
+                    <child>
+                      <object class="GtkCheckButton" id="sml">
+                        <property name="label">Small</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="mid">
+                        <property name="group">sml</property>
+                        <property name="label">Default</property>
+                        <property name="active">true</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkCheckButton" id="big">
+                        <property name="group">sml</property>
+                        <property name="label">Large</property>
+                      </object>
+                    </child>
                   </object>
                 </child>
               </object>
             </child>
-          </object>
-        </child>
-        <child>
-          <object class="HeContentBlock">
-            <property name="title">Show Line Numbers</property>
-            <property name="hexpand">true</property>
             <child>
-              <object class="GtkSwitch" id="sn">
-                <property name="valign">start</property>
+              <object class="HeSettingsRow">
+                <property name="title">Show Line Numbers</property>
+                <property name="hexpand">true</property>
+                <property name="activatable-widget">sn</property>
+                <child>
+                  <object class="GtkSwitch" id="sn">
+                    <property name="valign">start</property>
+                  </object>
+                </child>
               </object>
             </child>
-          </object>
-        </child>
-        <child>
-          <object class="HeContentBlock">
-            <property name="title">Highlight Current Line</property>
-            <property name="hexpand">true</property>
             <child>
-              <object class="GtkSwitch" id="hcl">
-                <property name="valign">start</property>
+              <object class="HeSettingsRow">
+                <property name="title">Highlight Current Line</property>
+                <property name="hexpand">true</property>
+                <property name="activatable-widget">hcl</property>
+                <child>
+                  <object class="GtkSwitch" id="hcl">
+                    <property name="valign">start</property>
+                  </object>
+                </child>
               </object>
             </child>
-          </object>
-        </child>
-        <child>
-          <object class="HeContentBlock">
-            <property name="title">Highlight Brackets</property>
-            <property name="subtitle">Highlights pairs of matching brackets.</property>
-            <property name="hexpand">true</property>
             <child>
-              <object class="GtkSwitch" id="hmb">
-                <property name="valign">start</property>
+              <object class="HeSettingsRow">
+                <property name="title">Highlight Brackets</property>
+                <property name="subtitle">Highlights pairs of matching brackets.</property>
+                <property name="hexpand">true</property>
+                <property name="activatable-widget">hmb</property>
+                <child>
+                  <object class="GtkSwitch" id="hmb">
+                    <property name="valign">start</property>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
