@@ -9,7 +9,6 @@
         <property name="orientation">vertical</property>
         <child>
           <object class="HeAppBar" id="title">
-            <property name="flat">true</property>
             <property name="show-buttons">true</property>
             <property name="show-back">false</property>
             <property name="viewtitle_label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
