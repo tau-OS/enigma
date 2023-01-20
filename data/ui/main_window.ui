@@ -11,7 +11,14 @@
           <object class="HeAppBar" id="title">
             <property name="show-buttons">true</property>
             <property name="show-back">false</property>
-            <property name="viewtitle_label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+            <property name="viewtitle_widget">
+              <object class="GtkLabel">
+                <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+                <style>
+                  <class name="view-title"/>
+                </style>
+              </object>
+            </property>
             <child>
               <object class="GtkMenuButton" id="menu_button">
                 <property name="icon-name">open-menu-symbolic</property>
