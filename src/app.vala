@@ -46,8 +46,6 @@ public class Enigma.Application : He.Application {
         typeof(GtkSource.View).ensure ();
 
         add_action_entries (app_entries, this);
-
-        new MainWindow (this);
     }
 
     protected override void activate () {
