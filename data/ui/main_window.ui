@@ -14,6 +14,7 @@
             <property name="viewtitle_widget">
               <object class="GtkLabel">
                 <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+                <property name="halign">start</property>
                 <style>
                   <class name="view-title"/>
                 </style>
