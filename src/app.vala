@@ -46,7 +46,9 @@ public class Enigma.Application : He.Application {
         typeof(GtkSource.View).ensure ();
 
         add_action_entries (app_entries, this);
+    }
 
+    protected override void activate () {
         var window = get_last_window ();
         if (window == null) {
             window = new MainWindow (this);
@@ -56,13 +58,16 @@ public class Enigma.Application : He.Application {
         }
     }
 
-    protected override void activate () {
-        active_window?.present ();
-    }
-
     public override void open (File[] files, string hint) {
 		base.open (files, hint);
-		new MainWindow (this).load(files[0]);
+        var window = get_last_window ();
+        if (window == null) {
+            window = new MainWindow (this);
+            window.load(files[0]);
+            window.show ();
+        } else {
+            window.present ();
+        }
 	}
 
     public MainWindow? get_last_window () {
