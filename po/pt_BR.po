@@ -8,28 +8,25 @@ msgstr ""
 "Project-Id-Version: co.tauos.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2023-01-22 07:58+0000\n"
-"Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
-"Language-Team: Chinese (Traditional) <https://weblate.fyralabs.com/projects/"
-"tauOS/enigma/zh_Hant/>\n"
-"Language: zh_Hant\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: pt_BR\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.1\n"
 
 #: data/co.tauos.Enigma.metainfo.xml.in:7 data/co.tauos.Enigma.desktop.in:4
 msgid "Simple text editor"
-msgstr "簡單編輯器"
+msgstr ""
 
 #: data/co.tauos.Enigma.metainfo.xml.in:9
 msgid "A simple text editor application."
-msgstr "簡單的文本編輯器。"
+msgstr ""
 
 #: data/co.tauos.Enigma.metainfo.xml.in:33
 msgid "First Release"
-msgstr "初次發佈"
+msgstr ""
 
 #: data/co.tauos.Enigma.desktop.in:3
 msgid "Enigma"
@@ -41,22 +38,22 @@ msgstr ""
 
 #: data/ui/menu.ui:7
 msgid "Settings…"
-msgstr "設定…"
+msgstr ""
 
 #: data/ui/menu.ui:11
 msgid "About Enigma"
-msgstr "關於 Enigma"
+msgstr ""
 
 #: src/utils.vala:26 src/utils.vala:47
 msgid "Text files"
-msgstr "文檔"
+msgstr ""
 
 #: src/utils.vala:30 src/utils.vala:51
 msgid "All files"
-msgstr "所有檔案"
+msgstr ""
 
 #: src/window.vala:121 src/window.vala:124 src/window.vala:195
 #: src/window.vala:209 src/window.vala:214 src/window.vala:229
 #: src/window.vala:238 src/window.vala:295
 msgid " lines"
-msgstr " 行"
+msgstr ""
