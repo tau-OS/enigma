@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: co.tauos.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2023-01-22 08:37+0000\n"
-"Last-Translator: Cappy <cappy@fyralabs.com>\n"
+"PO-Revision-Date: 2023-01-23 01:48+0000\n"
+"Last-Translator: Cappy <cappy@cappuchino.xyz>\n"
 "Language-Team: Thai <https://weblate.fyralabs.com/projects/tauOS/enigma/th/>"
 "\n"
 "Language: th\n"
@@ -37,7 +37,7 @@ msgstr "Enigma"
 
 #: data/co.tauos.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
-msgstr "text;plain;plaintext;"
+msgstr "text;plain;plaintext;ข้อความ;"
 
 #: data/ui/menu.ui:7
 msgid "Settings…"
