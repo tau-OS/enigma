@@ -1,0 +1,10 @@
+data/co.tauos.Enigma.metainfo.xml.in
+data/co.tauos.Enigma.desktop.in
+data/ui/main_window.ui
+data/ui/menu.ui
+data/ui/prefs.ui
+src/app.vala
+src/prefs.vala
+src/settings.vala
+src/utils.vala
+src/window.vala
