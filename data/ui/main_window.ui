@@ -44,16 +44,20 @@
           </object>
         </child>
         <child>
-          <object class="GtkSourceView" id="text_box">
-            <property name="vexpand">true</property>
-            <property name="hexpand">true</property>
-            <property name="wrap-mode">word</property>
-            <property name="left-margin">18</property>
-            <property name="right-margin">18</property>
-            <property name="top-margin">18</property>
-            <property name="bottom-margin">18</property>
-            <property name="pixels-above-lines">3</property>
-            <property name="pixels-inside-wrap">3</property>
+          <object class="GtkScrolledWindow">
+            <child>
+              <object class="GtkSourceView" id="text_box">
+                <property name="vexpand">true</property>
+                <property name="hexpand">true</property>
+                <property name="wrap-mode">word</property>
+                <property name="left-margin">18</property>
+                <property name="right-margin">18</property>
+                <property name="top-margin">18</property>
+                <property name="bottom-margin">18</property>
+                <property name="pixels-above-lines">3</property>
+                <property name="pixels-inside-wrap">3</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
