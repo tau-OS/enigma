@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: co.tauos.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2023-01-22 07:58+0000\n"
+"PO-Revision-Date: 2023-01-23 01:48+0000\n"
 "Last-Translator: windowsboy111 <windowsboy111@fyralabs.com>\n"
 "Language-Team: Chinese (Traditional) <https://weblate.fyralabs.com/projects/"
 "tauOS/enigma/zh_Hant/>\n"
@@ -33,11 +33,11 @@ msgstr "初次發佈"
 
 #: data/co.tauos.Enigma.desktop.in:3
 msgid "Enigma"
-msgstr ""
+msgstr "Enigma"
 
 #: data/co.tauos.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
-msgstr ""
+msgstr "text;plain;plaintext;字;編輯;edit;editor;"
 
 #: data/ui/menu.ui:7
 msgid "Settings…"

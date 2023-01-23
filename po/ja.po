@@ -8,55 +8,52 @@ msgstr ""
 "Project-Id-Version: co.tauos.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2023-01-23 01:48+0000\n"
-"Last-Translator: Cappy <cappy@cappuchino.xyz>\n"
-"Language-Team: Thai <https://weblate.fyralabs.com/projects/tauOS/enigma/th/>"
-"\n"
-"Language: th\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: ja\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.15.1\n"
 
 #: data/co.tauos.Enigma.metainfo.xml.in:7 data/co.tauos.Enigma.desktop.in:4
 msgid "Simple text editor"
-msgstr "โปรแกรมแก้ไขข้อความแบบเรียบง่าย"
+msgstr ""
 
 #: data/co.tauos.Enigma.metainfo.xml.in:9
 msgid "A simple text editor application."
-msgstr "โปรแกรมแก้ไขข้อความแบบเรียบง่าย"
+msgstr ""
 
 #: data/co.tauos.Enigma.metainfo.xml.in:33
 msgid "First Release"
-msgstr "เวอร์ชันแรก"
+msgstr ""
 
 #: data/co.tauos.Enigma.desktop.in:3
 msgid "Enigma"
-msgstr "Enigma"
+msgstr ""
 
 #: data/co.tauos.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
-msgstr "text;plain;plaintext;ข้อความ;"
+msgstr ""
 
 #: data/ui/menu.ui:7
 msgid "Settings…"
-msgstr "การตั้งค่า…"
+msgstr ""
 
 #: data/ui/menu.ui:11
 msgid "About Enigma"
-msgstr "เกี่ยวกับ Enigma"
+msgstr ""
 
 #: src/utils.vala:26 src/utils.vala:47
 msgid "Text files"
-msgstr "ไฟล์ข้อความ"
+msgstr ""
 
 #: src/utils.vala:30 src/utils.vala:51
 msgid "All files"
-msgstr "ไฟล์ทั้งหมด"
+msgstr ""
 
 #: src/window.vala:121 src/window.vala:124 src/window.vala:195
 #: src/window.vala:209 src/window.vala:214 src/window.vala:229
 #: src/window.vala:238 src/window.vala:295
 msgid " lines"
-msgstr " บรรทัด"
+msgstr ""
