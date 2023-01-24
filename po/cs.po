@@ -9,7 +9,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
 "PO-Revision-Date: 2023-01-24 21:27+0000\n"
-"Last-Translator: Písek Pískovec <pisekpiskovec@gmail.com>\n"
+"Last-Translator: Lains <lains@fyralabs.com>\n"
 "Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/enigma/cs/>"
 "\n"
 "Language: cs\n"
@@ -33,7 +33,7 @@ msgstr "První Vydání"
 
 #: data/co.tauos.Enigma.desktop.in:3
 msgid "Enigma"
-msgstr "Šifrovací stroj"
+msgstr "Enigma"
 
 #: data/co.tauos.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
