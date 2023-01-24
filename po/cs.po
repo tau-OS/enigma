@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: co.tauos.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2023-01-24 21:27+0000\n"
+"PO-Revision-Date: 2023-01-25 22:11+0000\n"
 "Last-Translator: Lains <lains@fyralabs.com>\n"
 "Language-Team: Czech <https://weblate.fyralabs.com/projects/tauOS/enigma/cs/>"
 "\n"
@@ -45,7 +45,7 @@ msgstr "Nastavení…"
 
 #: data/ui/menu.ui:11
 msgid "About Enigma"
-msgstr "O Šifrovacím stroji"
+msgstr "O Enigmai"
 
 #: src/utils.vala:26 src/utils.vala:47
 msgid "Text files"
