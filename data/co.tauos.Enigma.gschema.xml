@@ -20,5 +20,10 @@
 			<summary>Highlight Matching Brackets</summary>
 			<description>Highlight matching brackets in the editor.</description>
 		</key>
+		<key type="b" name="vim-emulation">
+			<default>false</default>
+			<summary>Vim Emulation</summary>
+			<description>Emulate Vim keybinds in the editor.</description>
+		</key>
 	</schema>
 </schemalist>

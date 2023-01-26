@@ -32,6 +32,8 @@ namespace Enigma {
         unowned Gtk.Switch hcl;
         [GtkChild]
         unowned Gtk.Switch hmb;
+        [GtkChild]
+        unowned Gtk.Switch ve;
 
         public Preferences (MainWindow win) {
             Object (parent: win);
@@ -76,6 +78,7 @@ namespace Enigma {
             settings.settings.bind ("show-line-numbers", sn, "active", DEFAULT);
             settings.settings.bind ("hilight-curr-line", hcl, "active", DEFAULT);
             settings.settings.bind ("hilight-brackets", hmb, "active", DEFAULT);
+            settings.settings.bind ("vim-emulation", ve, "active", DEFAULT);
         }
     }
 }

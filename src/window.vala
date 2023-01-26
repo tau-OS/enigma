@@ -35,6 +35,12 @@ namespace Enigma {
         unowned GtkSource.View text_box;
         [GtkChild]
         unowned Gtk.SearchEntry search_entry;
+        [GtkChild]
+        unowned Gtk.Box vim_status_bar;
+        [GtkChild]
+        unowned Gtk.Label command_bar;
+        [GtkChild]
+        unowned Gtk.Label command_text;
 
         private string _file_name = null;
         public string file_name {
@@ -88,6 +94,9 @@ namespace Enigma {
                 title: "Enigma"
             );
         }
+
+        private GtkSource.VimIMContext? vim_im_context;
+        private Gtk.EventControllerKey? vim_event_controller;
 
         construct {
             // Actions
@@ -166,6 +175,19 @@ namespace Enigma {
                 }
             });
 
+            if (settings.settings.get_boolean ("vim-emulation")) {
+                setup_vim_emulation ();
+            }
+
+            settings.settings.changed.connect((key) => {
+                if (key != "vim-emulation") return;
+                if (settings.settings.get_boolean ("vim-emulation")) {
+                    this.setup_vim_emulation ();
+                } else {
+                    this.cleanup_vim_emulation ();
+                }
+            });
+
             settings.settings.bind ("show-line-numbers", text_box, "show-line-numbers", DEFAULT);
             settings.settings.bind ("hilight-curr-line", text_box, "highlight-current-line", DEFAULT);
             settings.settings.bind ("hilight-brackets", ((GtkSource.Buffer)text_box.get_buffer ()), "highlight-matching-brackets", DEFAULT);
@@ -173,6 +195,32 @@ namespace Enigma {
             // Window
             this.set_size_request (360, 360);
             this.show ();
+        }
+
+        private void setup_vim_emulation () {
+            cleanup_vim_emulation();
+
+            vim_im_context = new GtkSource.VimIMContext();
+            vim_event_controller = new Gtk.EventControllerKey();
+
+            vim_event_controller.set_im_context(vim_im_context);
+            vim_event_controller.set_propagation_phase (Gtk.PropagationPhase.CAPTURE);
+
+            vim_im_context.bind_property("command-bar-text", command_bar, "label", 0);
+            vim_im_context.bind_property("command-text", command_text, "label", 0);
+
+            text_box.add_controller (vim_event_controller);
+            vim_im_context.set_client_widget (text_box);
+            vim_status_bar.visible = true;
+        }
+
+        private void cleanup_vim_emulation () {
+            if (vim_event_controller != null) text_box.remove_controller (vim_event_controller);
+            if (vim_im_context != null) vim_im_context.set_client_widget (null);
+
+            vim_im_context = null;
+            vim_event_controller = null;
+            vim_status_bar.visible = false;
         }
 
         [GtkCallback]
