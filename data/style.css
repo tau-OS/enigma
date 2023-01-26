@@ -21,3 +21,7 @@ textview.view {
 .sml-font {
   font-size: 0.9rem;
 }
+
+.vim-status-bar {
+  font-weight: bold;
+}

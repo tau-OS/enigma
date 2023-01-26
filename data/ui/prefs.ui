@@ -73,6 +73,19 @@
                 </child>
               </object>
             </child>
+            <child>
+              <object class="HeSettingsRow">
+                <property name="title">Vim Emulation</property>
+                <property name="subtitle">Emulate Vim keybinds in the editor.</property>
+                <property name="hexpand">true</property>
+                <property name="activatable-widget">ve</property>
+                <child>
+                  <object class="GtkSwitch" id="ve">
+                    <property name="valign">start</property>
+                  </object>
+                </child>
+              </object>
+            </child>
           </object>
         </child>
       </object>

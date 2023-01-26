@@ -61,6 +61,27 @@
           </object>
         </child>
         <child>
+          <object class="GtkBox" id="vim_status_bar">
+            <property name="margin-start">6</property>
+            <property name="margin-end">6</property>
+            <property name="spacing">6</property>
+            <property name="visible">0</property>
+            <property name="css-classes">vim-status-bar</property>
+            <child>
+              <object class="GtkLabel" id="command_bar">
+                <property name="halign">start</property>
+              </object>
+            </child>
+            <child>
+              <object class="GtkLabel" id="command_text">
+                <property name="halign">end</property>
+                <property name="hexpand">1</property>
+                <property name="ellipsize">end</property>
+              </object>
+            </child>
+          </object>
+        </child>
+        <child>
           <object class="HeBottomBar">
             <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name_ext" bind-flags="sync-create"/>
             <property name="description" bind-source="EnigmaMainWindow" bind-property="file_line_count" bind-flags="sync-create"/>
