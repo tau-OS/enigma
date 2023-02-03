@@ -15,9 +15,8 @@ template EnigmaMainWindow : He.ApplicationWindow {
             label: bind EnigmaMainWindow.file_name;
             halign: start;
             styles [
-                    "view-title",
-                    "music-list"
-                  ]
+                    "view-title"
+            ]
           }
         ;
         
@@ -38,6 +37,7 @@ template EnigmaMainWindow : He.ApplicationWindow {
       search-changed => $on_search_activate ();
     }
     ScrolledWindow {
+      styles ["text-view"]
       GtkSource.View text_box {
         vexpand: true;
         hexpand: true;
