@@ -1,0 +1,17 @@
+using Gtk 4.0;
+
+menu menu {
+  section {
+    item {
+      custom: "theme";
+    }
+    item {
+      label: _("_Settings…");
+      action: "win.action_prefs";
+    }
+    item {
+      label: _("_About Enigma");
+      action: "win.action_about";
+    }
+  }
+}

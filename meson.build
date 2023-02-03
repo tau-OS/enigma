@@ -37,6 +37,14 @@ add_project_arguments(
   language: 'c'
 )
 
+# Blueprint
+subproject('blueprint-compiler')
+add_project_arguments(
+    '--gresourcesdir', meson.current_build_dir() / 'data',
+    language: ['vala']
+)
+#
+
 subdir('data')
 
 sources = [
