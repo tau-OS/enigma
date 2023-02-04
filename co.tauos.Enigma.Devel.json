@@ -1,5 +1,5 @@
 {
-    "id" : "co.tauos.Enigma.Devel",
+    "app-id" : "co.tauos.Enigma.Devel",
     "runtime" : "co.tauos.Sdk",
     "runtime-version" : "stable",
     "sdk" : "co.tauos.Sdk",

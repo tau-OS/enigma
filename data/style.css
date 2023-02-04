@@ -6,8 +6,8 @@ entry.search {
   border-radius: 999px;
 }
 
-.text-view .sourceview text {
-  background: linear-gradient(0deg, alpha(@accent_bg_color, 0.05), alpha(@accent_bg_color, 0.05)), image(@view_bg_color);
+textview.view {
+  background: shade(@card_bg_color, 1.1);
 }
 
 .big-font {
