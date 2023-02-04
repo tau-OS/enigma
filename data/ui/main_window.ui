@@ -45,6 +45,7 @@
               <object class="HeOverlayButton" id="new_button">
                 <property name="tooltip-text" translatable="yes">New File</property>
                 <property name="icon">list-add-symbolic</property>
+                <property name="typeb">primary</property>
                 <signal name="clicked" handler="on_new_doc_requested"/>
                 <child>
                   <object class="GtkBox">
