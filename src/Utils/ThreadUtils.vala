@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2021 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -36,8 +36,14 @@ namespace Enigma.ThreadUtils {
     Once<ThreadPool<Worker>> _once;
 
     unowned ThreadPool<Worker> _get_thread_pool () throws ThreadError {
+        ThreadError? error = null;
         return _once.once (() => {
-            var tp = new ThreadPool<Worker>.with_owned_data (worker => worker.run (), 1, false);
+            ThreadPool<Worker> tp = null;
+            try {
+                tp = new ThreadPool<Worker>.with_owned_data (worker => worker.run (), 1, false);
+            } catch (ThreadError te) {
+                error = te;
+            }
             return tp;
         });
     }

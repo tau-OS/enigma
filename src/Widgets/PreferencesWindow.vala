@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2022 Fyra Labs
+* Copyright (c) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public

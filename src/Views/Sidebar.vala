@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2022 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -18,6 +18,10 @@
 */
 [GtkTemplate (ui = "/co/tauos/Enigma/sidebar.ui")]
 public class Enigma.Sidebar : He.Bin {
+    [GtkChild]
+    public unowned Gtk.ListView lv;
+
+
     public DocViewModel? view_model { get; set; }
     public ObservableList<Doc>? docs { get; set; }
     public Gtk.SingleSelection? ss {get; construct;}
@@ -28,6 +32,7 @@ public class Enigma.Sidebar : He.Bin {
         set {
             if (value == _selected_doc)
                 return;
+
             if (value != null)
                 _selected_doc = value;
         }

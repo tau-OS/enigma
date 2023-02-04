@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2021 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -31,8 +31,6 @@ public class Enigma.DocViewModel : Object {
     }
 
     public void create_new_doc (Doc? doc) {
-        var dt = new GLib.DateTime.now_local ();
-
         var n = new Doc () {
             title = _("New File"),
             subtitle = "~/doc.txt",

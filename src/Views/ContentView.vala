@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2022 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -99,6 +99,10 @@ public class Enigma.ContentView : He.Bin {
             });
 
             textbox.grab_focus ();
+
+            if (_doc != null) {
+                _doc.notify.connect (on_text_updated);
+            }
         }
     }
 
@@ -136,12 +140,23 @@ public class Enigma.ContentView : He.Bin {
 
     public async void open () {
         var file = yield Utils.display_open_dialog ();
-        string file_path = file.get_path ();
-        string text;
+        uint8[] t;
         try {
-            GLib.FileUtils.get_contents (file_path, out text);
-            if (file != null && text != null) {
-                textbox.get_buffer ().set_text (text);
+            file.load_contents (null, out t, null);
+
+            if (file != null && t != null) {
+                var n = new Doc () {
+                    title = file.get_basename ().replace (".txt", ""),
+                    subtitle = file.get_path (),
+                    text = ((string) t)
+                };
+
+                vm.create_new_doc (n);
+                vm.update_doc (n);
+                ((MainWindow)He.Misc.find_ancestor_of_type<MainWindow>(this)).sidebar.lv.get_model ().select_item (
+                    vm.docs.data.index (n),
+                    true
+                );
             } else {
                 textbox.get_buffer ().set_text ("");
             }
@@ -193,14 +208,14 @@ public class Enigma.ContentView : He.Bin {
     }
 
     [GtkCallback]
-        public void on_search_activate () {
-            var search_str = search_entry.get_text();
-            Gtk.TextIter start_iter, end_iter, match_start, match_end;
-            textbox.get_buffer ().get_bounds (out start_iter, out end_iter);
-            bool found = start_iter.forward_search (search_str, 0, out match_start, out match_end, end_iter);
-            if (found) {
-                textbox.get_buffer ().select_range (match_start, match_end);
-            }
+    public void on_search_activate () {
+        var search_str = search_entry.get_text();
+        Gtk.TextIter start_iter, end_iter, match_start, match_end;
+        textbox.get_buffer ().get_bounds (out start_iter, out end_iter);
+        bool found = start_iter.forward_search (search_str, 0, out match_start, out match_end, end_iter);
+        if (found) {
+            textbox.get_buffer ().select_range (match_start, match_end);
         }
+    }
 }
 

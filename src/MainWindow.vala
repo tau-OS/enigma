@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2022 Fyra Labs
+* Copyright (c) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -112,11 +112,32 @@ namespace Enigma {
             settings.present ();
         }
 
-        public void load(GLib.File file) {
-            uint8[] text;
+        public void load (GLib.File file) {
+            uint8[] t;
             try {
-                file.load_contents (null, out text, null);
-                
+                file.load_contents (null, out t, null);
+
+                if (file != null && t != null) {
+                    var n = new Doc () {
+                        title = file.get_basename ().replace (".txt", ""),
+                        subtitle = file.get_path (),
+                        text = ((string) t)
+                    };
+
+                    view_model.create_new_doc (n);
+                    view_model.update_doc (n);
+                    sidebar.lv.get_model ().select_item (0, true);
+                } else {
+                    var n = new Doc () {
+                        title = _("New File"),
+                        subtitle = "~/doc.txt",
+                        text = "",
+                    };
+
+                    view_model.create_new_doc (n);
+                    view_model.update_doc (n);
+                    sidebar.lv.get_model ().select_item (0, true);
+                }
             } catch (Error err) {
                 print (err.message);
             }

@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2021 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -29,25 +29,6 @@ namespace Enigma.FileUtils {
             GLib.FileUtils.set_contents (file_path, contents);
 
             return true;
-        });
-    }
-
-    async string? read_text_file (string filename, Cancellable? cancellable = null) throws Error {
-        return yield ThreadUtils.run_in_thread<string?> (() => {
-            var file_path = Path.build_filename (Environment.get_user_data_dir (), "/co.tauos.Enigma/", filename);
-
-            string contents = "";
-
-            try {
-                GLib.FileUtils.get_contents (file_path, out contents);
-            } catch (Error err) {
-                if (err is FileError.NOENT)
-                    return null;
-
-                throw err;
-            }
-
-            return contents;
         });
     }
 }

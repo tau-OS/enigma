@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2021 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -17,7 +17,7 @@
 * Boston, MA 02110-1301 USA
 */
 public class Enigma.ObservableList<T> : Object, ListModel {
-    List<T> data = new List<T> ();
+    public List<T> data = new List<T> ();
 
     public void add (T item) {
         var position = data.length ();

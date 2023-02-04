@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2022 Fyra Labs
+* Copyright (c) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it and/or
 * modify it under the terms of the GNU General Public
@@ -48,26 +48,23 @@ public class Enigma.Application : He.Application {
         typeof (ContentView).ensure ();
 
         add_action_entries (app_entries, this);
-
-        var repo = new DocRepository ();
-        var view_model = new DocViewModel (repo);
-
-        new MainWindow (this, view_model);
     }
 
     protected override void activate () {
-        active_window?.present ();
+        var repo = new DocRepository ();
+        var view_model = new DocViewModel (repo);
+
+        var window = new MainWindow (this, view_model);
+        window.present ();
     }
 
     public override void open (File[] files, string hint) {
 		base.open (files, hint);
-        var window = get_last_window ();
-        if (window == null) {
-            window.load(files[0]);
-            window.show ();
-        } else {
-            window.present ();
-        }
+        var repo = new DocRepository ();
+        var view_model = new DocViewModel (repo);
+        var window = new MainWindow (this, view_model);
+        window.load(files[0]);
+        window.present ();
 	}
 
     public MainWindow? get_last_window () {

@@ -1,5 +1,5 @@
 /*
-* Copyright (C) 2017-2021 Lains
+* Copyright (C) 2023 Fyra Labs
 *
 * This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
@@ -24,12 +24,7 @@ public class Enigma.DocRepository : Object {
     Queue<string> delete_queue = new Queue<string> ();
 
     public async List<Doc> get_docs () {
-        try {
-            return new List<Doc> ();
-        } catch (Error err) {
-            critical ("Error: %s", err.message);
-            return new List<Doc> ();
-        }
+        return new List<Doc> ();
     }
 
     public void insert_doc (Doc doc) {
