@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <template class="EnigmaSidebar" parent="HeBin">
+    <property name="vexpand">1</property>
+    <child>
+      <object class="GtkBox" id="box">
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkScrolledWindow">
+            <property name="hscrollbar-policy">never</property>
+            <property name="vexpand">1</property>
+            <child>
+              <object class="GtkListView" id="lv">
+                <property name="hexpand">1</property>
+                <property name="margin-start">18</property>
+                <property name="margin-end">18</property>
+                <style>
+                  <class name="content-list" />
+                </style>
+                <property name="factory">
+                  <object class="GtkBuilderListItemFactory">
+                    <property name="resource">/co/tauos/Enigma/docrow.ui</property>
+                  </object>
+                </property>
+                <binding name="model">
+                  <lookup name="ss">EnigmaSidebar</lookup>
+                </binding>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </template>
+</interface>

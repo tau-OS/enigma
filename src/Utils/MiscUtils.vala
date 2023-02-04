@@ -1,7 +1,7 @@
 /*
-* Copyright (c) 2022 Fyra Labs
+* Copyright (C) 2017-2022 Lains
 *
-* This program is free software; you can redistribute it and/or
+* This program is free software; you can redistribute it &&/or
 * modify it under the terms of the GNU General Public
 * License as published by the Free Software Foundation; either
 * version 3 of the License, or (at your option) any later version.
@@ -15,7 +15,6 @@
 * License along with this program; if not, write to the
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
-*
 */
 namespace Enigma.Utils {
     public unowned MainWindow win;
@@ -65,14 +64,14 @@ namespace Enigma.Utils {
         var response = Gtk.ResponseType.CANCEL;
 
         dialog.response.connect (r => {
-            response = (Gtk.ResponseType) r;
+        	response = (Gtk.ResponseType) r;
 
-            run_dialog_async.callback ();
+        	run_dialog_async.callback ();
         });
 
         dialog.show ();
 
         yield;
         return response;
-    }
+	}
 }

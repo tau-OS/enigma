@@ -44,25 +44,25 @@ public class Enigma.Application : He.Application {
         base.startup ();
 
         typeof(GtkSource.View).ensure ();
+        typeof (Sidebar).ensure ();
+        typeof (ContentView).ensure ();
 
         add_action_entries (app_entries, this);
+
+        var repo = new DocRepository ();
+        var view_model = new DocViewModel (repo);
+
+        new MainWindow (this, view_model);
     }
 
     protected override void activate () {
-        var window = get_last_window ();
-        if (window == null) {
-            window = new MainWindow (this);
-            window.show ();
-        } else {
-            window.present ();
-        }
+        active_window?.present ();
     }
 
     public override void open (File[] files, string hint) {
 		base.open (files, hint);
         var window = get_last_window ();
         if (window == null) {
-            window = new MainWindow (this);
             window.load(files[0]);
             window.show ();
         } else {

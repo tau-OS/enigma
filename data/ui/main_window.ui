@@ -1,106 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
+  <object class="GtkSingleSelection" id="selection_model">
+    <property name="autoselect">no</property>
+    <property name="can-unselect">yes</property>
+    <property name="model">
+      <object class="GtkFilterListModel" id="filter_model">
+        <property name="incremental">1</property>
+        <property name="model">
+          <object class="GtkSortListModel">
+            <binding name="model">
+              <lookup name="docs">sidebar</lookup>
+            </binding>
+            <property name="sorter">
+              <object class="EnigmaDocSorter" id="sorter"/>
+            </property>
+          </object>
+        </property>
+      </object>
+    </property>
+  </object>
   <template class="EnigmaMainWindow" parent="HeApplicationWindow">
     <property name="default-width">800</property>
     <property name="default-height">600</property>
     <child>
       <object class="GtkBox" id="main_box">
-        <property name="orientation">vertical</property>
+        <property name="orientation">horizontal</property>
         <child>
-          <object class="HeAppBar" id="title">
-            <property name="show-buttons">true</property>
-            <property name="show-back">false</property>
-            <property name="viewtitle_widget">
+          <object class="HeSideBar" id="sbox">
+            <property name="titlewidget">
               <object class="GtkLabel">
-                <property name="label" bind-source="EnigmaMainWindow" bind-property="file_name" bind-flags="sync-create"/>
+                <property name="label" translatable="yes">Open Files</property>
                 <property name="halign">start</property>
                 <style>
-                  <class name="view-title"/>
+                  <class name="view-title" />
                 </style>
               </object>
             </property>
+            <property name="has-margins">0</property>
+            <property name="show-back">0</property>
+            <property name="show-buttons">0</property>
+            <property name="width-request">250</property>
             <child>
-              <object class="GtkMenuButton" id="menu_button">
-                <property name="icon-name">open-menu-symbolic</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkToggleButton" id="search_button">
-                <property name="icon-name">system-search-symbolic</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="GtkSearchEntry" id="search_entry">
-            <property name="placeholder-text">Search text…</property>
-            <property name="visible" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
-            <property name="margin-start">10</property>
-            <property name="margin-end">10</property>
-            <property name="margin-top">6</property>
-            <property name="margin-bottom">6</property>
-            <signal name="search-changed" handler="on_search_activate"/>
-          </object>
-        </child>
-        <child>
-          <object class="GtkScrolledWindow">
-            <child>
-              <object class="GtkSourceView" id="text_box">
-                <property name="vexpand">true</property>
-                <property name="hexpand">true</property>
-                <property name="wrap-mode">word</property>
-                <property name="left-margin">18</property>
-                <property name="right-margin">18</property>
-                <property name="top-margin">18</property>
-                <property name="bottom-margin">18</property>
-                <property name="pixels-above-lines">3</property>
-                <property name="pixels-inside-wrap">3</property>
+              <object class="HeOverlayButton" id="new_button">
+                <property name="tooltip-text" translatable="yes">New File</property>
+                <property name="icon">list-add-symbolic</property>
+                <signal name="clicked" handler="on_new_doc_requested"/>
+                <child>
+                  <object class="GtkBox">
+                    <property name="orientation">vertical</property>
+                    <child>
+                      <object class="GtkScrolledWindow" id="bscroller">
+                        <property name="hscrollbar-policy">never</property>
+                        <child>
+                          <object class="EnigmaSidebar" id="sidebar">
+                            <signal name="new_doc_requested" handler="on_new_doc_requested"/>
+                            <binding name="docs">
+                              <lookup name="docs" type="EnigmaDocViewModel">
+                                <lookup name="view-model">EnigmaMainWindow</lookup>
+                              </lookup>
+                            </binding>
+                            <binding name="view-model">
+                              <lookup name="view-model">EnigmaMainWindow</lookup>
+                            </binding>
+                            <property name="ss">selection_model</property>
+                          </object>
+                        </child>
+                      </object>
+                    </child>
+                  </object>
+                </child>
               </object>
             </child>
           </object>
         </child>
         <child>
-          <object class="GtkBox" id="vim_status_bar">
-            <property name="margin-start">6</property>
-            <property name="margin-end">6</property>
-            <property name="spacing">6</property>
-            <property name="visible">0</property>
-            <property name="css-classes">vim-status-bar</property>
-            <child>
-              <object class="GtkLabel" id="command_bar">
-                <property name="halign">start</property>
-              </object>
-            </child>
-            <child>
-              <object class="GtkLabel" id="command_text">
-                <property name="halign">end</property>
-                <property name="hexpand">1</property>
-                <property name="ellipsize">end</property>
-              </object>
-            </child>
-          </object>
-        </child>
-        <child>
-          <object class="HeBottomBar">
-            <property name="title" bind-source="EnigmaMainWindow" bind-property="file_name_ext" bind-flags="sync-create"/>
-            <property name="description" bind-source="EnigmaMainWindow" bind-property="file_line_count" bind-flags="sync-create"/>
-            <property name="collapse_actions">0</property>
-            <child>
-              <object class="HeIconicButton" id="new_button">
-                <property name="icon">document-new-symbolic</property>
-              </object>
-            </child>
-            <child>
-              <object class="HeIconicButton" id="open_button">
-                <property name="icon-name">document-open-symbolic</property>
-              </object>
-            </child>
-            <child>
-              <object class="HeIconicButton" id="save_as_button">
-                <property name="icon">document-save-as-symbolic</property>
-              </object>
-            </child>
+          <object class="EnigmaContentView" id="doccontent">
+            <signal name="doc_update_requested" handler="on_doc_update_requested"/>
+            <binding name="doc">
+              <lookup name="selected-doc">sidebar</lookup>
+            </binding>
+            <binding name="vm">
+              <lookup name="view-model">EnigmaMainWindow</lookup>
+            </binding>
           </object>
         </child>
       </object>

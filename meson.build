@@ -40,11 +40,22 @@ add_project_arguments(
 subdir('data')
 
 sources = [
-  'src/app.vala',
-  'src/prefs.vala',
-  'src/settings.vala',
-  'src/utils.vala',
-  'src/window.vala',
+  'src/Application.vala',
+  'src/Models/Doc.vala',
+  'src/Repositories/DocRepository.vala',
+  'src/Services/SettingsManager.vala',
+  'src/Utils/FileUtils.vala',
+  'src/Utils/MiscUtils.vala',
+  'src/Utils/Sorter.vala',
+  'src/Utils/ObservableList.vala',
+  'src/Utils/ThreadUtils.vala',
+  'src/ViewModels/DocViewModel.vala',
+  'src/Views/ContentView.vala',
+  'src/Views/Sidebar.vala',
+  'src/Views/View.vala',
+  'src/Widgets/DocRowContent.vala',
+  'src/Widgets/PreferencesWindow.vala',
+  'src/MainWindow.vala',
 ]
 
 dependencies = [
@@ -56,6 +67,7 @@ dependencies = [
   dependency('libhelium-1'),
   dependency('gmodule-2.0'),
   dependency('gtksourceview-5'),
+  dependency('json-glib-1.0'),
   meson.get_compiler('c').find_library('m', required: true)
 ]
 
