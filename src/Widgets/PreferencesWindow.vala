@@ -18,7 +18,7 @@
 *
 */
 namespace Enigma {
-    [GtkTemplate (ui = "/co/tauos/Enigma/prefs.ui")]
+    [GtkTemplate (ui = "/com/fyralabs/Enigma/prefs.ui")]
     public class Preferences : He.SettingsWindow {
         [GtkChild]
         unowned Gtk.CheckButton sml;

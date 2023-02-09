@@ -1,10 +1,10 @@
 {
-    "app-id" : "co.tauos.Enigma",
-    "runtime" : "co.tauos.Platform",
+    "app-id" : "com.fyralabs.Enigma",
+    "runtime" : "com.fyralabs.Platform",
     "runtime-version" : "stable",
-    "sdk" : "co.tauos.Sdk",
-    "command" : "co.tauos.Enigma",
-    "rename-icon" : "co.tauos.Enigma",
+    "sdk" : "com.fyralabs.Sdk",
+    "command" : "com.fyralabs.Enigma",
+    "rename-icon" : "com.fyralabs.Enigma",
     "finish-args" : [
         "--device=dri",
         "--socket=wayland",

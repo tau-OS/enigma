@@ -18,7 +18,7 @@
 *
 */
 namespace Enigma {
-    [GtkTemplate (ui = "/co/tauos/Enigma/main_window.ui")]
+    [GtkTemplate (ui = "/com/fyralabs/Enigma/main_window.ui")]
     public class MainWindow : He.ApplicationWindow {
         delegate void HookFunc ();
         public signal void clicked ();
@@ -69,7 +69,7 @@ namespace Enigma {
             app.set_accels_for_action("app.quit", {"<Ctrl>q"});
 
             var theme = Gtk.IconTheme.get_for_display (Gdk.Display.get_default ());
-            theme.add_resource_path ("/co/tauos/Enigma/");
+            theme.add_resource_path ("/com/fyralabs/Enigma/");
 
             // Window
             this.set_size_request (360, 360);
@@ -96,10 +96,10 @@ namespace Enigma {
                  Config.APP_ID,
                  "https://github.com/tau-OS/enigma/tree/main/po",
                  "https://github.com/tau-OS/enigma/issues",
-                 "catalogue://co.tauos.Enigma",
+                 "catalogue://com.fyralabs.Enigma",
                  {},
-                 {"Lains", "Lea"},
-                 2022,
+                 {"Fyra Labs"},
+                 2023,
                  He.AboutWindow.Licenses.GPLv3,
                  He.Colors.BLUE
              );

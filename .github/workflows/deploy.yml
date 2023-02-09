@@ -27,7 +27,7 @@ jobs:
       name: "Build"
       with:
         bundle: modi.flatpak
-        manifest-path: co.tauos.Enigma.json
+        manifest-path: com.fyralabs.Enigma.json
         cache-key: flatpak-builder-${{ github.sha }}
         repository-name: catalogue
         repository-url: https://repo.tauos.co/catalogue.flatpakrepo

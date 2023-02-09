@@ -1,11 +1,11 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the co.tauos.Enigma package.
+# This file is distributed under the same license as the com.fyralabs.Enigma package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: co.tauos.Enigma\n"
+"Project-Id-Version: com.fyralabs.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
 "PO-Revision-Date: 2023-01-23 01:48+0000\n"
@@ -19,23 +19,23 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
 "X-Generator: Weblate 4.15.1\n"
 
-#: data/co.tauos.Enigma.metainfo.xml.in:7 data/co.tauos.Enigma.desktop.in:4
+#: data/com.fyralabs.Enigma.metainfo.xml.in:7 data/com.fyralabs.Enigma.desktop.in:4
 msgid "Simple text editor"
 msgstr "Editor de texto simples"
 
-#: data/co.tauos.Enigma.metainfo.xml.in:9
+#: data/com.fyralabs.Enigma.metainfo.xml.in:9
 msgid "A simple text editor application."
 msgstr "Um app de editor de texto simples."
 
-#: data/co.tauos.Enigma.metainfo.xml.in:33
+#: data/com.fyralabs.Enigma.metainfo.xml.in:33
 msgid "First Release"
 msgstr "Primeiro Lançamento"
 
-#: data/co.tauos.Enigma.desktop.in:3
+#: data/com.fyralabs.Enigma.desktop.in:3
 msgid "Enigma"
 msgstr "Enigma"
 
-#: data/co.tauos.Enigma.desktop.in:7
+#: data/com.fyralabs.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
 msgstr "texto;simples;texto simples;"
 

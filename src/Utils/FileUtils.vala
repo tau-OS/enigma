@@ -19,7 +19,7 @@
 namespace Enigma.FileUtils {
     async bool create_text_file (string filename, string contents, Cancellable? cancellable = null) throws Error {
         return yield ThreadUtils.run_in_thread<bool> (() => {
-            var dir_path = Path.build_filename (Environment.get_user_data_dir (), "/co.tauos.Enigma/");
+            var dir_path = Path.build_filename (Environment.get_user_data_dir (), "/com.fyralabs.Enigma/");
 
             if (DirUtils.create_with_parents (dir_path, 0755) != 0) {
                 throw new Error (FileError.quark (), GLib.FileUtils.error_from_errno (errno), "%s", strerror (errno));

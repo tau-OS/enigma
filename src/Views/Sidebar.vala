@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
-[GtkTemplate (ui = "/co/tauos/Enigma/sidebar.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Enigma/sidebar.ui")]
 public class Enigma.Sidebar : He.Bin {
     [GtkChild]
     public unowned Gtk.ListView lv;

@@ -1,5 +1,5 @@
 <schemalist>
-	<schema id="co.tauos.Enigma" path="/co/tauos/Enigma/">
+	<schema id="com.fyralabs.Enigma" path="/com/fyralabs/Enigma/">
 		<key type="s" name="font-size">
 			<default>"'medium'"</default>
 			<summary>Font Size</summary>

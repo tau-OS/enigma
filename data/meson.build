@@ -56,7 +56,7 @@ subdir('icons')
 
 asresources = gnome.compile_resources(
   'asresources',
-  'co.tauos.Enigma.gresources.xml',
+  'com.fyralabs.Enigma.gresources.xml',
   source_dir: meson.current_build_dir(),
   c_name: 'as',
   install_dir: get_option('datadir') / meson.project_name(),

@@ -19,7 +19,7 @@
                 </style>
                 <property name="factory">
                   <object class="GtkBuilderListItemFactory">
-                    <property name="resource">/co/tauos/Enigma/docrow.ui</property>
+                    <property name="resource">/com/fyralabs/Enigma/docrow.ui</property>
                   </object>
                 </property>
                 <binding name="model">

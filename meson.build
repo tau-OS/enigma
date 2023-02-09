@@ -1,4 +1,4 @@
-project('co.tauos.Enigma', 'vala',
+project('com.fyralabs.Enigma', 'vala',
         version: '0.1.0',
         meson_version: '>= 0.50.0'
 )
@@ -14,10 +14,10 @@ add_project_arguments([
 )
 
 if get_option('development')
-  app_id = 'co.tauos.Enigma.Devel'
+  app_id = 'com.fyralabs.Enigma.Devel'
   name_suffix = ' (Nightly)'
 else
-  app_id = 'co.tauos.Enigma'
+  app_id = 'com.fyralabs.Enigma'
   name_suffix = ''
 endif
 

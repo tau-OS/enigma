@@ -1,11 +1,11 @@
-# Spanish translations for co.tauos.Enigma package.
-# Copyright (C) 2023 THE co.tauos.Enigma'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the co.tauos.Enigma package.
+# Spanish translations for com.fyralabs.Enigma package.
+# Copyright (C) 2023 THE com.fyralabs.Enigma'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the com.fyralabs.Enigma package.
 # Automatically generated, 2023.
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: co.tauos.Enigma\n"
+"Project-Id-Version: com.fyralabs.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
 "PO-Revision-Date: 2023-01-21 23:00-0800\n"

@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
-[GtkTemplate (ui = "/co/tauos/Enigma/docrowcontent.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Enigma/docrowcontent.ui")]
 public class Enigma.DocRowContent : He.Bin {
     private Doc? _doc;
     public Doc? doc {

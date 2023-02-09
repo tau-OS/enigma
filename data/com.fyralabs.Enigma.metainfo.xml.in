@@ -9,7 +9,7 @@
         <p>A simple text editor application.</p>
     </description>
     <provides>
-        <binary>co.tauos.Enigma</binary>
+        <binary>com.fyralabs.Enigma</binary>
     </provides>
     <kudos>
       <kudo>ModernToolkit</kudo>
@@ -19,7 +19,7 @@
     <url type="homepage">https://github.com/tau-OS/enigma/</url>
     <url type="bugtracker">https://github.com/tau-OS/enigma/issues</url>
     <url type="translate">https://github.com/tau-OS/enigma/blob/main/po/README.md</url>
-    <launchable type="desktop-id">co.tauos.Enigma.desktop</launchable>
+    <launchable type="desktop-id">com.fyralabs.Enigma.desktop</launchable>
     <screenshots>
         <screenshot type="default">
             <image>https://raw.githubusercontent.com/tau-OS/enigma/main/data/shot.png</image>

@@ -1,5 +1,5 @@
-data/co.tauos.Enigma.metainfo.xml.in
-data/co.tauos.Enigma.desktop.in
+data/com.fyralabs.Enigma.metainfo.xml.in
+data/com.fyralabs.Enigma.desktop.in
 data/ui/main_window.ui
 data/ui/menu.ui
 data/ui/prefs.ui

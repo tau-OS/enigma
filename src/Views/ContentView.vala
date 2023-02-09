@@ -16,7 +16,7 @@
 * Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 * Boston, MA 02110-1301 USA
 */
-[GtkTemplate (ui = "/co/tauos/Enigma/contentview.ui")]
+[GtkTemplate (ui = "/com/fyralabs/Enigma/contentview.ui")]
 public class Enigma.ContentView : He.Bin {
     delegate void HookFunc ();
     public signal void clicked ();
@@ -113,7 +113,7 @@ public class Enigma.ContentView : He.Bin {
     }
 
     construct {
-        var builder = new Gtk.Builder.from_resource ("/co/tauos/Enigma/menu.ui");
+        var builder = new Gtk.Builder.from_resource ("/com/fyralabs/Enigma/menu.ui");
         menu_button.menu_model = (MenuModel)builder.get_object ("menu");
 
         open_button.clicked.connect (() => { open.begin (); });

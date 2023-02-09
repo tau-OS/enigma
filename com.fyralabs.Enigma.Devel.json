@@ -1,9 +1,9 @@
 {
-    "app-id" : "co.tauos.Enigma.Devel",
-    "runtime" : "co.tauos.Sdk",
+    "app-id" : "com.fyralabs.Enigma.Devel",
+    "runtime" : "com.fyralabs.Sdk",
     "runtime-version" : "stable",
-    "sdk" : "co.tauos.Sdk",
-    "command" : "co.tauos.Enigma",
+    "sdk" : "com.fyralabs.Sdk",
+    "command" : "com.fyralabs.Enigma",
     "finish-args" : [
         "--device=dri",
         "--socket=wayland",

@@ -18,7 +18,7 @@
 */
 [SingleInstance]
 public class Enigma.Settings : Object {
-    public GLib.Settings settings = new GLib.Settings ("co.tauos.Enigma");
+    public GLib.Settings settings = new GLib.Settings ("com.fyralabs.Enigma");
     public string font_size { get; set; }
 
     construct {
