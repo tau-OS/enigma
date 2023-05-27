@@ -19,7 +19,8 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 4.16.4\n"
 
-#: data/com.fyralabs.Enigma.metainfo.xml.in:7 data/com.fyralabs.Enigma.desktop.in:4
+#: data/com.fyralabs.Enigma.metainfo.xml.in:7
+#: data/com.fyralabs.Enigma.desktop.in:4
 msgid "Simple text editor"
 msgstr "簡單編輯器"
 
