@@ -19,32 +19,45 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Weblate 4.16.4\n"
 
+#: data/com.fyralabs.Enigma.metainfo.xml.in:7
+#: data/com.fyralabs.Enigma.desktop.in:4
 msgid "Simple text editor"
 msgstr ""
 
+#: data/com.fyralabs.Enigma.metainfo.xml.in:9
 msgid "A simple text editor application."
 msgstr ""
 
+#: data/com.fyralabs.Enigma.metainfo.xml.in:33
 msgid "First Release"
 msgstr ""
 
+#: data/com.fyralabs.Enigma.desktop.in:3
 msgid "Enigma"
 msgstr ""
 
+#: data/com.fyralabs.Enigma.desktop.in:7
 msgid "text;plain;plaintext;"
 msgstr ""
 
+#: data/ui/menu.ui:7
 msgid "Settings…"
 msgstr ""
 
+#: data/ui/menu.ui:11
 msgid "About Enigma"
 msgstr ""
 
+#: src/utils.vala:26 src/utils.vala:47
 msgid "Text files"
 msgstr ""
 
+#: src/utils.vala:30 src/utils.vala:51
 msgid "All files"
 msgstr ""
 
+#: src/window.vala:121 src/window.vala:124 src/window.vala:195
+#: src/window.vala:209 src/window.vala:214 src/window.vala:229
+#: src/window.vala:238 src/window.vala:295
 msgid " lines"
 msgstr ""
