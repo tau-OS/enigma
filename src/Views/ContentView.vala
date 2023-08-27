@@ -136,6 +136,10 @@ public class Enigma.ContentView : He.Bin {
         settings.settings.bind ("show-line-numbers", textbox, "show-line-numbers", DEFAULT);
         settings.settings.bind ("hilight-curr-line", textbox, "highlight-current-line", DEFAULT);
         settings.settings.bind ("hilight-brackets", ((GtkSource.Buffer)textbox.get_buffer ()), "highlight-matching-brackets", DEFAULT);
+
+        var gutter = textbox.get_gutter(Gtk.TextWindowType.LEFT);
+        gutter.add_css_class ("gutter-padding-fix");
+        gutter.add_css_class ("bottom-bar");
     }
 
     public async void open () {
