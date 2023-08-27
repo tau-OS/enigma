@@ -25,3 +25,7 @@ textview text {
 .vim-status-bar {
   font-weight: bold;
 }
+
+.gutter-padding-fix {
+    padding: 0;
+}
