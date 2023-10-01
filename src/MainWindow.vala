@@ -60,10 +60,15 @@ namespace Enigma {
             );
         }
 
+        static construct {
+            action_accelerators.set (ACTION_SAVE, "<Ctrl>s");
+        }
+
         construct {
             // Actions
             actions = new SimpleActionGroup ();
             actions.add_action_entries (ACTION_ENTRIES, this);
+
             insert_action_group ("win", actions);
 
             foreach (var action in action_accelerators.get_keys ()) {
@@ -73,7 +78,6 @@ namespace Enigma {
                 app.set_accels_for_action (ACTION_PREFIX + action, accels_array);
             }
             app.set_accels_for_action ("app.quit", {"<Ctrl>q"});
-            app.set_accels_for_action ("win.action_save", {"<Ctrl>s"});
 
             var theme = Gtk.IconTheme.get_for_display (Gdk.Display.get_default ());
             theme.add_resource_path ("/com/fyralabs/Enigma/");
