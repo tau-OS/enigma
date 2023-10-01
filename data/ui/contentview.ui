@@ -43,7 +43,7 @@
                         <property name="left-margin">18</property>
                         <property name="right-margin">18</property>
                         <property name="top-margin">18</property>
-                        <property name="bottom-margin">18</property>
+                        <property name="bottom-margin">101</property>
                         <property name="pixels-above-lines">3</property>
                         <property name="pixels-inside-wrap">3</property>
                       </object>
