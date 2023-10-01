@@ -139,7 +139,7 @@ public class Enigma.ContentView : He.Bin {
 
         var gutter = textbox.get_gutter (Gtk.TextWindowType.LEFT);
         gutter.add_css_class ("gutter-padding-fix");
-        gutter.add_css_class ("bottom-bar");
+        gutter.add_css_class ("surface-container-bg-color");
     }
 
     public async void open () {
