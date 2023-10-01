@@ -27,6 +27,8 @@ namespace Enigma {
         public unowned Sidebar sidebar;
         [GtkChild]
         public unowned ContentView doccontent;
+        [GtkChild]
+        public unowned Gtk.MenuButton menu_button;
 
         public SimpleActionGroup actions { get; construct; }
         public const string ACTION_PREFIX = "win.";
@@ -80,6 +82,8 @@ namespace Enigma {
             this.set_size_request (360, 360);
             this.show ();
             this.mw = (MainWindow) app.get_active_window ();
+
+            menu_button.get_popover ().has_arrow = false;
         }
 
         [GtkCallback]

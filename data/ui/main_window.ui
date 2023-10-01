@@ -1,6 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <interface>
   <requires lib="gtk" version="4.0"/>
+  <menu id="menu">
+    <section>
+      <item>
+        <attribute name="label" translatable="true">Settings…</attribute>
+        <attribute name="action">win.action_prefs</attribute>
+      </item>
+      <item>
+        <attribute name="label" translatable="true">About Enigma</attribute>
+        <attribute name="action">win.action_about</attribute>
+      </item>
+    </section>
+  </menu>
   <object class="GtkSingleSelection" id="selection_model">
     <property name="autoselect">no</property>
     <property name="can-unselect">yes</property>
@@ -39,8 +51,14 @@
             </property>
             <property name="has-margins">0</property>
             <property name="show-back">0</property>
-            <property name="show-buttons">0</property>
-            <property name="width-request">250</property>
+            <property name="show-buttons">1</property>
+            <property name="width-request">213</property>
+            <child type="titlebar-button">
+              <object class="GtkMenuButton" id="menu_button">
+                <property name="icon-name">open-menu-symbolic</property>
+                <property name="menu-model">menu</property>
+              </object>
+            </child>
             <child>
               <object class="HeOverlayButton" id="new_button">
                 <property name="tooltip-text" translatable="yes">New File</property>
