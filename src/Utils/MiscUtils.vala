@@ -18,9 +18,10 @@
 */
 namespace Enigma.Utils {
     public unowned MainWindow win;
-    public async File? display_open_dialog () {
+    public async File? display_open_dialog (Gtk.Window? win) {
         var dialog = new Gtk.FileChooserNative (null, win, Gtk.FileChooserAction.OPEN, null, null);
         dialog.set_transient_for(win);
+        dialog.modal = true;
         var filter1 = new Gtk.FileFilter ();
         filter1.set_filter_name (_("Text files"));
         filter1.add_pattern ("*.txt");
@@ -39,9 +40,10 @@ namespace Enigma.Utils {
         return null;
     }
 
-    public async File? display_save_dialog () {
+    public async File? display_save_dialog (Gtk.Window? win) {
         var dialog = new Gtk.FileChooserNative (null, win, Gtk.FileChooserAction.SAVE, null, null);
         dialog.set_transient_for(win);
+        dialog.modal = true;
         var filter1 = new Gtk.FileFilter ();
         filter1.set_filter_name (_("Text files"));
         filter1.add_pattern ("*.txt");

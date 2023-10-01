@@ -25,16 +25,20 @@ namespace Enigma {
 
         [GtkChild]
         public unowned Sidebar sidebar;
+        [GtkChild]
+        public unowned ContentView doccontent;
 
         public SimpleActionGroup actions { get; construct; }
         public const string ACTION_PREFIX = "win.";
         public const string ACTION_ABOUT = "action_about";
         public const string ACTION_PREFS = "action_prefs";
+        public const string ACTION_SAVE = "action_save";
         public static Gee.MultiMap<string, string> action_accelerators = new Gee.HashMultiMap<string, string> ();
 
         private const GLib.ActionEntry[] ACTION_ENTRIES = {
               { ACTION_ABOUT, action_about },
               { ACTION_PREFS, action_prefs },
+              { ACTION_SAVE, action_save },
         };
 
         // Custom
@@ -66,7 +70,8 @@ namespace Enigma {
 
                 app.set_accels_for_action (ACTION_PREFIX + action, accels_array);
             }
-            app.set_accels_for_action("app.quit", {"<Ctrl>q"});
+            app.set_accels_for_action ("app.quit", {"<Ctrl>q"});
+            app.set_accels_for_action ("win.action_save", {"<Ctrl>s"});
 
             var theme = Gtk.IconTheme.get_for_display (Gdk.Display.get_default ());
             theme.add_resource_path ("/com/fyralabs/Enigma/");
@@ -110,6 +115,9 @@ namespace Enigma {
             var settings = new Preferences (this);
             settings.parent = this;
             settings.present ();
+        }
+        public void action_save () {
+            doccontent.save.begin ();
         }
 
         public void load (GLib.File file) {

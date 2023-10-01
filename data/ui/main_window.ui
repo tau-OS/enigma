@@ -84,6 +84,9 @@
             <binding name="vm">
               <lookup name="view-model">EnigmaMainWindow</lookup>
             </binding>
+            <binding name="app">
+              <lookup name="app">EnigmaMainWindow</lookup>
+            </binding>
           </object>
         </child>
       </object>

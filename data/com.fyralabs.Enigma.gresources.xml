@@ -5,7 +5,6 @@
     <file alias="style-dark.css">style-dark.css</file>
 
     <file alias="main_window.ui">ui/main_window.ui</file>
-    <file alias="menu.ui">ui/menu.ui</file>
     <file alias="prefs.ui">ui/prefs.ui</file>
     <file alias="sidebar.ui">ui/sidebar.ui</file>
     <file alias="docrow.ui">ui/docrow.ui</file>

@@ -26,8 +26,6 @@ public class Enigma.ContentView : He.Bin {
     [GtkChild]
     public unowned Gtk.SearchEntry search_entry;
     [GtkChild]
-    unowned Gtk.MenuButton menu_button;
-    [GtkChild]
     unowned Gtk.Button open_button;
     [GtkChild]
     unowned Gtk.Button save_as_button;
@@ -44,6 +42,7 @@ public class Enigma.ContentView : He.Bin {
 
     private GtkSource.VimIMContext? vim_im_context;
     private Gtk.EventControllerKey? vim_event_controller;
+    public He.Application app { get; construct set; }
 
     Doc? _doc;
     public Doc? doc {
@@ -106,16 +105,14 @@ public class Enigma.ContentView : He.Bin {
         }
     }
 
-    public ContentView (DocViewModel? vm) {
+    public ContentView (DocViewModel? vm, He.Application app) {
         Object (
-            vm: vm
+            vm: vm,
+            app: app
         );
     }
 
     construct {
-        var builder = new Gtk.Builder.from_resource ("/com/fyralabs/Enigma/menu.ui");
-        menu_button.menu_model = (MenuModel)builder.get_object ("menu");
-
         open_button.clicked.connect (() => { open.begin (); });
         save_as_button.clicked.connect (() => { save.begin (); });
 
@@ -143,7 +140,7 @@ public class Enigma.ContentView : He.Bin {
     }
 
     public async void open () {
-        var file = yield Utils.display_open_dialog ();
+        var file = yield Utils.display_open_dialog (app.active_window);
         uint8[] t;
         try {
             file.load_contents (null, out t, null);
@@ -170,7 +167,7 @@ public class Enigma.ContentView : He.Bin {
     }
 
     public async void save () {
-        var file = yield Utils.display_save_dialog ();
+        var file = yield Utils.display_save_dialog (app.active_window);
         Gtk.TextIter start, end;
         textbox.get_buffer ().get_bounds (out start, out end);
         try {
