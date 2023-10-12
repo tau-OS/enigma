@@ -8,7 +8,8 @@
         <property name="orientation">vertical</property>
         <child>
           <object class="HeAppBar" id="title">
-            <property name="show-buttons">false</property>
+            <property name="show-left-title-buttons">0</property>
+            <property name="show-right-title-buttons">1</property>
             <property name="show-back">false</property>
           </object>
         </child>
