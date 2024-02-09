@@ -116,7 +116,6 @@ public class Enigma.ContentView : He.Bin {
         open_button.clicked.connect (() => { open.begin (); });
         open_button.tooltip_markup = _("Open…");
 
-        save_as_button.clicked.connect (() => { save.begin (); });
         save_as_button.action_name = MainWindow.ACTION_PREFIX + MainWindow.ACTION_SAVE;
         save_as_button.tooltip_markup = He.Misc.accel_string (app.get_accels_for_action (save_as_button.action_name), (_("Save As…")));
 
@@ -162,8 +161,6 @@ public class Enigma.ContentView : He.Bin {
                     vm.docs.data.index (n),
                     true
                 );
-            } else {
-                textbox.get_buffer ().set_text ("");
             }
         } catch (Error err) {
             print (err.message);
