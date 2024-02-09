@@ -13,7 +13,7 @@
                 <property name="title">Font Size</property>
                 <property name="hexpand">true</property>
                 <child>
-                  <object class="GtkBox">
+                  <object class="HeSegmentedButton">
                     <child>
                       <object class="GtkCheckButton" id="sml">
                         <property name="label">Small</property>
@@ -42,7 +42,7 @@
                 <property name="hexpand">true</property>
                 <property name="activatable-widget">sn</property>
                 <child>
-                  <object class="GtkSwitch" id="sn">
+                  <object class="HeSwitch" id="sn">
                     <property name="valign">start</property>
                   </object>
                 </child>
@@ -54,7 +54,7 @@
                 <property name="hexpand">true</property>
                 <property name="activatable-widget">hcl</property>
                 <child>
-                  <object class="GtkSwitch" id="hcl">
+                  <object class="HeSwitch" id="hcl">
                     <property name="valign">start</property>
                   </object>
                 </child>
@@ -67,7 +67,7 @@
                 <property name="hexpand">true</property>
                 <property name="activatable-widget">hmb</property>
                 <child>
-                  <object class="GtkSwitch" id="hmb">
+                  <object class="HeSwitch" id="hmb">
                     <property name="valign">start</property>
                   </object>
                 </child>
@@ -80,7 +80,7 @@
                 <property name="hexpand">true</property>
                 <property name="activatable-widget">ve</property>
                 <child>
-                  <object class="GtkSwitch" id="ve">
+                  <object class="HeSwitch" id="ve">
                     <property name="valign">start</property>
                   </object>
                 </child>

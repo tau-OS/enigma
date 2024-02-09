@@ -10,14 +10,30 @@
           <object class="HeAppBar" id="title">
             <property name="show-left-title-buttons">0</property>
             <property name="show-back">false</property>
+
+            <child type="titlebar-button">
+              <object class="HeDisclosureButton" id="open_button">
+                <property name="icon-name">document-open-symbolic</property>
+              </object>
+            </child>
+            <child type="titlebar-button">
+              <object class="HeDisclosureButton" id="save_as_button">
+                <property name="icon">document-save-as-symbolic</property>
+              </object>
+            </child>
+            <child type="titlebar-button">
+              <object class="GtkToggleButton" id="search_button">
+                <property name="icon-name">system-search-symbolic</property>
+              </object>
+            </child>
           </object>
         </child>
         <child>
           <object class="GtkSearchEntry" id="search_entry">
             <property name="placeholder-text">Search text…</property>
             <property name="visible" bind-source="search_button" bind-property="active" bind-flags="sync-create"/>
-            <property name="margin-start">10</property>
-            <property name="margin-end">10</property>
+            <property name="margin-start">18</property>
+            <property name="margin-end">18</property>
             <property name="margin-top">6</property>
             <property name="margin-bottom">6</property>
             <signal name="search-changed" handler="on_search_activate"/>
@@ -29,72 +45,43 @@
           </object>
         </child>
         <child>
-          <object class="GtkOverlay">
+          <object class="GtkBox">
+            <property name="orientation">vertical</property>
             <child>
-              <object class="GtkBox">
-                <property name="orientation">vertical</property>
+              <object class="GtkScrolledWindow">
                 <child>
-                  <object class="GtkScrolledWindow">
-                    <child>
-                      <object class="GtkSourceView" id="textbox">
-                        <property name="vexpand">true</property>
-                        <property name="hexpand">true</property>
-                        <property name="wrap-mode">word</property>
-                        <property name="left-margin">18</property>
-                        <property name="right-margin">18</property>
-                        <property name="top-margin">18</property>
-                        <property name="bottom-margin">101</property>
-                        <property name="pixels-above-lines">3</property>
-                        <property name="pixels-inside-wrap">3</property>
-                      </object>
-                    </child>
-                  </object>
-                </child>
-                <child>
-                  <object class="GtkBox" id="vim_status_bar">
-                    <property name="margin-start">6</property>
-                    <property name="margin-end">6</property>
-                    <property name="spacing">6</property>
-                    <property name="visible">0</property>
-                    <property name="css-classes">vim-status-bar</property>
-                    <child>
-                      <object class="GtkLabel" id="command_bar">
-                        <property name="halign">start</property>
-                      </object>
-                    </child>
-                    <child>
-                      <object class="GtkLabel" id="command_text">
-                        <property name="halign">end</property>
-                        <property name="hexpand">1</property>
-                        <property name="ellipsize">end</property>
-                      </object>
-                    </child>
+                  <object class="GtkSourceView" id="textbox">
+                    <property name="vexpand">true</property>
+                    <property name="hexpand">true</property>
+                    <property name="monospace">true</property>
+                    <property name="wrap-mode">word</property>
+                    <property name="left-margin">18</property>
+                    <property name="right-margin">18</property>
+                    <property name="top-margin">18</property>
+                    <property name="bottom-margin">18</property>
+                    <property name="pixels-above-lines">3</property>
+                    <property name="pixels-inside-wrap">3</property>
                   </object>
                 </child>
               </object>
             </child>
-            <child type="overlay">
-              <object class="HeBottomBar">
-                <property name="collapse_actions">0</property>
-                <property name="valign">end</property>
-                <child type="left">
-                  <object class="HeIconicButton" id="open_button">
-                    <property name="icon-name">document-open-symbolic</property>
+            <child>
+              <object class="GtkBox" id="vim_status_bar">
+                <property name="margin-start">18</property>
+                <property name="margin-end">18</property>
+                <property name="spacing">6</property>
+                <property name="visible">0</property>
+                <property name="css-classes">vim-status-bar</property>
+                <child>
+                  <object class="GtkLabel" id="command_bar">
+                    <property name="halign">start</property>
                   </object>
                 </child>
-                <child type="left">
-                  <object class="HeIconicButton" id="save_as_button">
-                    <property name="icon">document-save-as-symbolic</property>
-                  </object>
-                </child>
-                <child type="right">
-                  <object class="GtkToggleButton" id="search_button">
-                    <property name="icon-name">system-search-symbolic</property>
-                    <property name="valign">center</property>
-                    <style>
-                      <class name="flat" />
-                      <class name="iconic-button" />
-                    </style>
+                <child>
+                  <object class="GtkLabel" id="command_text">
+                    <property name="halign">end</property>
+                    <property name="hexpand">1</property>
+                    <property name="ellipsize">end</property>
                   </object>
                 </child>
               </object>

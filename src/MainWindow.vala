@@ -93,6 +93,8 @@ namespace Enigma {
         [GtkCallback]
         void on_new_doc_requested () {
             view_model.create_new_doc (null);
+            view_model.update_doc (null);
+            sidebar.lv.get_model ().select_item (0, true);
         }
 
         [GtkCallback]

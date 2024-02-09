@@ -2,54 +2,18 @@
 <interface>
 <template class="EnigmaDocRowContent" parent="HeBin">
   <child>
-    <object class="GtkBox" id="row_box">
-      <property name="orientation">horizontal</property>
-      <property name="valign">center</property>
-      <property name="spacing">6</property>
-      <style>
-        <class name="mini-content-block"/>
-      </style>
-      <child>
-        <object class="GtkBox">
-          <property name="orientation">vertical</property>
-          <property name="valign">center</property>
-          <property name="spacing">6</property>
-          <property name="margin-start">6</property>
-          <child>
-            <object class="GtkLabel">
-              <property name="halign">start</property>
-              <property name="ellipsize">end</property>
-              <property name="single-line-mode">yes</property>
-              <binding name="label">
-                <lookup name="title" type="EnigmaDoc">
-                  <lookup name="doc">EnigmaDocRowContent</lookup>
-                </lookup>
-              </binding>
-              <style>
-                <class name="cb-title"/>
-              </style>
-            </object>
-          </child>
-          <child>
-            <object class="GtkLabel">
-              <property name="halign">start</property>
-              <property name="hexpand">1</property>
-              <property name="ellipsize">end</property>
-              <property name="single-line-mode">yes</property>
-              <property name="max-width-chars">25</property>
-              <property name="use-markup">1</property>
-              <binding name="label">
-                <lookup name="subtitle" type="EnigmaDoc">
-                    <lookup name="doc">EnigmaDocRowContent</lookup>
-                </lookup>
-              </binding>
-              <style>
-                <class name="cb-subtitle"/>
-              </style>
-            </object>
-          </child>
-        </object>
-      </child>
+    <object class="HeMiniContentBlock" id="row_box">
+      <property name="hexpand">true</property>
+      <binding name="title">
+        <lookup name="title" type="EnigmaDoc">
+          <lookup name="doc">EnigmaDocRowContent</lookup>
+        </lookup>
+      </binding>
+      <binding name="subtitle">
+        <lookup name="subtitle" type="EnigmaDoc">
+            <lookup name="doc">EnigmaDocRowContent</lookup>
+        </lookup>
+      </binding>
     </object>
   </child>
 </template>

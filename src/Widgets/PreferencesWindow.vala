@@ -27,13 +27,13 @@ namespace Enigma {
         [GtkChild]
         unowned Gtk.CheckButton big;
         [GtkChild]
-        unowned Gtk.Switch sn;
+        unowned He.Switch sn;
         [GtkChild]
-        unowned Gtk.Switch hcl;
+        unowned He.Switch hcl;
         [GtkChild]
-        unowned Gtk.Switch hmb;
+        unowned He.Switch hmb;
         [GtkChild]
-        unowned Gtk.Switch ve;
+        unowned He.Switch ve;
 
         public Preferences (MainWindow win) {
             Object (parent: win);
@@ -75,10 +75,10 @@ namespace Enigma {
                 }
             });
 
-            settings.settings.bind ("show-line-numbers", sn, "active", DEFAULT);
-            settings.settings.bind ("hilight-curr-line", hcl, "active", DEFAULT);
-            settings.settings.bind ("hilight-brackets", hmb, "active", DEFAULT);
-            settings.settings.bind ("vim-emulation", ve, "active", DEFAULT);
+            settings.settings.bind ("show-line-numbers", sn.iswitch, "active", DEFAULT);
+            settings.settings.bind ("hilight-curr-line", hcl.iswitch, "active", DEFAULT);
+            settings.settings.bind ("hilight-brackets", hmb.iswitch, "active", DEFAULT);
+            settings.settings.bind ("vim-emulation", ve.iswitch, "active", DEFAULT);
         }
     }
 }

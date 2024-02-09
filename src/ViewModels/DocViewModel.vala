@@ -47,7 +47,7 @@ public class Enigma.DocViewModel : Object {
         save_docs ();
     }
 
-    public void update_doc (Doc doc) {
+    public void update_doc (Doc? doc) {
         repository.update_doc (doc);
         save_docs ();
     }
