@@ -2,8 +2,7 @@
 <interface>
   <requires lib="gtk" version="4.0"/>
   <template class="EnigmaPreferences" parent="HeSettingsWindow">
-    <property name="resizable">0</property>
-    <child>
+    <child type="page">
       <object class="HeSettingsPage">
         <property name="margin-bottom">12</property>
         <child>
