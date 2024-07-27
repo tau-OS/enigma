@@ -53,7 +53,7 @@
             <property name="show-back">0</property>
             <property name="show-right-title-buttons">0</property>
             <property name="width-request">230</property>
-            <child type="titlebar-button">
+            <child type="titlebar-menu">
               <object class="GtkMenuButton" id="menu_button">
                 <property name="icon-name">open-menu-symbolic</property>
                 <property name="menu-model">menu</property>

@@ -21,7 +21,7 @@
                 <property name="icon">document-save-as-symbolic</property>
               </object>
             </child>
-            <child type="titlebar-button">
+            <child type="titlebar-toggle">
               <object class="GtkToggleButton" id="search_button">
                 <property name="icon-name">system-search-symbolic</property>
               </object>
