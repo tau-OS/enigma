@@ -8,8 +8,8 @@ msgstr ""
 "Project-Id-Version: com.fyralabs.Enigma\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-21 23:00-0800\n"
-"PO-Revision-Date: 2024-04-27 23:33+0000\n"
-"Last-Translator: fluffysfriends <sebastian.nilsson.94@hotmail.se>\n"
+"PO-Revision-Date: 2024-07-30 15:52+0000\n"
+"Last-Translator: Kristoffer Grundström <swedishsailfishosuser@tutanota.com>\n"
 "Language-Team: Swedish <https://weblate.fyralabs.com/projects/tauOS/enigma/"
 "sv/>\n"
 "Language: sv\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.4.2\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #: data/com.fyralabs.Enigma.metainfo.xml.in:7
 #: data/com.fyralabs.Enigma.desktop.in:4
@@ -26,7 +26,7 @@ msgstr "Enkel text redigerare"
 
 #: data/com.fyralabs.Enigma.metainfo.xml.in:9
 msgid "A simple text editor application."
-msgstr ""
+msgstr "En enkel applikation för textredigering."
 
 #: data/com.fyralabs.Enigma.metainfo.xml.in:33
 msgid "First Release"
@@ -46,18 +46,18 @@ msgstr "Inställningar…"
 
 #: data/ui/menu.ui:11
 msgid "About Enigma"
-msgstr ""
+msgstr "Om Enigma"
 
 #: src/utils.vala:26 src/utils.vala:47
 msgid "Text files"
-msgstr ""
+msgstr "Text-filer"
 
 #: src/utils.vala:30 src/utils.vala:51
 msgid "All files"
-msgstr ""
+msgstr "Alla filer"
 
 #: src/window.vala:121 src/window.vala:124 src/window.vala:195
 #: src/window.vala:209 src/window.vala:214 src/window.vala:229
 #: src/window.vala:238 src/window.vala:295
 msgid " lines"
-msgstr ""
+msgstr " rader"
