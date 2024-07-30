@@ -13,19 +13,19 @@
                 <property name="hexpand">true</property>
                 <child>
                   <object class="HeSegmentedButton">
-                    <child>
+                    <child type="segment">
                       <object class="GtkCheckButton" id="sml">
                         <property name="label">Small</property>
                       </object>
                     </child>
-                    <child>
+                    <child type="segment">
                       <object class="GtkCheckButton" id="mid">
                         <property name="group">sml</property>
                         <property name="label">Default</property>
                         <property name="active">true</property>
                       </object>
                     </child>
-                    <child>
+                    <child type="segment">
                       <object class="GtkCheckButton" id="big">
                         <property name="group">sml</property>
                         <property name="label">Large</property>

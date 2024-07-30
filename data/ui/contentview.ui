@@ -12,12 +12,14 @@
             <property name="show-back">false</property>
 
             <child type="titlebar-button">
-              <object class="HeDisclosureButton" id="open_button">
+              <object class="HeButton" id="open_button">
+                <property name="is-disclosure">1</property>
                 <property name="icon-name">document-open-symbolic</property>
               </object>
             </child>
             <child type="titlebar-button">
-              <object class="HeDisclosureButton" id="save_as_button">
+              <object class="HeButton" id="save_as_button">
+                <property name="is-disclosure">1</property>
                 <property name="icon">document-save-as-symbolic</property>
               </object>
             </child>
